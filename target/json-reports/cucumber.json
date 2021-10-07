@@ -1,0 +1,143 @@
+[
+  {
+    "line": 2,
+    "elements": [
+      {
+        "start_timestamp": "2021-10-07T19:29:58.555Z",
+        "line": 3,
+        "name": "",
+        "description": "",
+        "id": ";",
+        "type": "scenario",
+        "keyword": "Scenario",
+        "steps": [
+          {
+            "result": {
+              "duration": 30577545000,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "demoqa anasayfaya gidin",
+            "match": {
+              "location": "stepdefinitions.TextBoxStepDefinitions.demoqa_anasayfaya_gidin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 245326900,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "elements butonuna basiniz",
+            "match": {
+              "location": "stepdefinitions.TextBoxStepDefinitions.elements_butonuna_basiniz()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.ElementNotInteractableException: element not interactable\n  (Session info: chrome\u003d94.0.4606.71)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-OQC39B2\u0027, ip: \u0027192.168.43.157\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.12\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.71, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\\Users\\BESTTE~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:50475}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: a4c7ad1a9e0c6b18145bf489b69543fb\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)\r\n\tat org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:84)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)\r\n\tat java.base/java.lang.reflect.Method.invoke(Method.java:566)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)\r\n\tat com.sun.proxy.$Proxy16.click(Unknown Source)\r\n\tat stepdefinitions.TextBoxStepDefinitions.textbox_butonuna_tiklayiniz(TextBoxStepDefinitions.java:37)\r\n\tat ✽.textbox butonuna tiklayiniz(file:///C:/Users/BEST%20TECH/IdeaProjects/demoqaProject2/src/test/resources/features/textbox.feature:6)\r\n",
+              "duration": 12100092400,
+              "status": "failed"
+            },
+            "line": 6,
+            "name": "textbox butonuna tiklayiniz",
+            "match": {
+              "location": "stepdefinitions.TextBoxStepDefinitions.textbox_butonuna_tiklayiniz()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 7,
+            "name": "Fullname giriniz",
+            "match": {
+              "location": "stepdefinitions.TextBoxStepDefinitions.fullname_giriniz()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 8,
+            "name": "email giriniz",
+            "match": {
+              "location": "stepdefinitions.TextBoxStepDefinitions.email_giriniz()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 997900,
+              "status": "skipped"
+            },
+            "line": 9,
+            "name": "adres1 giriniz",
+            "match": {
+              "location": "stepdefinitions.TextBoxStepDefinitions.adres1_giriniz()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 10,
+            "name": "adres2 giriniz",
+            "match": {
+              "location": "stepdefinitions.TextBoxStepDefinitions.adres2_giriniz()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 996800,
+              "status": "skipped"
+            },
+            "line": 11,
+            "name": "submit butonuna tiklayin",
+            "match": {
+              "location": "stepdefinitions.TextBoxStepDefinitions.submit_butonuna_tiklayin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 12,
+            "name": "giris isleminin tamamlandigini dogrulayin",
+            "match": {
+              "location": "stepdefinitions.TextBoxStepDefinitions.giris_isleminin_tamamlandigini_dogrulayin()"
+            },
+            "keyword": "And "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@gor"
+          }
+        ]
+      }
+    ],
+    "name": "",
+    "description": "",
+    "id": "",
+    "keyword": "Feature",
+    "uri": "file:src/test/resources/features/textbox.feature",
+    "tags": [
+      {
+        "name": "@gor",
+        "type": "Tag",
+        "location": {
+          "line": 1,
+          "column": 1
+        }
+      }
+    ]
+  }
+]
