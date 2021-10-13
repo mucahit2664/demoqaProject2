@@ -8,14 +8,15 @@ import utilities.Driver;
 public class TextBoxPage {
 
 
-    public TextBoxPage() {
+    public TextBoxPage()
+    {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
     @FindBy(xpath = "(//div[@class='card mt-4 top-card'])[1]")
     public WebElement elementsCard;
 
-    @FindBy(xpath = "(//div[@class='header-wrapper'])[1]")
+    @FindBy(xpath = "(//span[@class='pr-1'])[1]\"")
     public WebElement elementsMenu;
 
 
@@ -39,7 +40,7 @@ public class TextBoxPage {
     @FindBy(id = "permanentAddress")
     public WebElement permanentAddressTextBox;
 
-    @FindBy(xpath = "//button[@id='submit']")
+    @FindBy(id = "submit")
     public WebElement submitButton;
 
     @FindBy(xpath = "//div[@class='col-12 mt-4 col-md-6']")

@@ -1,4 +1,4 @@
-package stepdefinitions;
+package stepDefinitions;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
@@ -26,21 +26,21 @@ public class TextBoxStepDefinitions {
     public void elements_butonuna_basiniz() {
 
         textBoxPage.elementsCard.click();
-        textBoxPage.elementsMenu.click();
-actions.sendKeys(Keys.PAGE_DOWN).perform();
+       // textBoxPage.elementsMenu.click();
+//actions.sendKeys(Keys.PAGE_DOWN).perform();
 
     }
 
     @Then("textbox butonuna tiklayiniz")
     public void textbox_butonuna_tiklayiniz() {
-        ReusableMethods.waitFor(2);
-        textBoxPage.textBoxMenuLink.click();
+        //ReusableMethods.waitFor(2);
+textBoxPage.textBoxMenuLink.click();
 
     }
 
     @Then("Fullname giriniz")
     public void fullname_giriniz() {
-textBoxPage.userForm.click();
+//textBoxPage.userForm.click();
         textBoxPage.fullnameTextBox.sendKeys(ConfigReader.getProperty("fullName"));
     }
         @Then("email giriniz")
@@ -60,6 +60,9 @@ textBoxPage.userForm.click();
 
         @Then("submit butonuna tiklayin")
         public void submit_butonuna_tiklayin () {
+        ReusableMethods.waitFor(2);
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+
 textBoxPage.submitButton.click();
         }
 
