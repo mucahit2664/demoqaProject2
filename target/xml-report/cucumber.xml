@@ -1,48 +1,18 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="30.824">
-    <testcase classname="Checkbox" name="CHECKBOX DOGRULAMA" time="30.506">
-        <failure message="no such element: Unable to locate element: {&quot;method&quot;:&quot;css selector&quot;,&quot;selector&quot;:&quot;.excelFile&quot;}&#10;  (Session info: chrome=94.0.4606.81)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'DESKTOP-OQC39B2', ip: '192.168.43.157', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\BESTTE~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61114}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: a50a2b2c21ee137c839dfcd9a2a0b9a4&#10;*** Element info: {Using=class name, value=excelFile}" type="org.openqa.selenium.NoSuchElementException">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="13.861">
+    <testcase classname="US03 RadioButton" name="TC01 radio buton gorunmesi" time="13.497">
+        <system-out>
             <![CDATA[Given demoqa anasayfaya gidin...............................................passed
 Then elements butonuna basiniz..............................................passed
-And checktbox butonuna tiklayiniz...........................................passed
-And + butonuna basınız......................................................passed
-And butun mnenunun acildigini dogrulayin....................................passed
-And eksibutonuna basiniz....................................................passed
-Then menunun kapalı oldugunu dogrulayiniz...................................passed
-And + butonuna basınız......................................................passed
-Then excelfile butonu basin.................................................passed
-Then excelfile butonu secili oldugunu dogrulayin............................failed
-
-StackTrace:
-org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"css selector","selector":".excelFile"}
-  (Session info: chrome=94.0.4606.81)
-For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/no_such_element.html
-Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
-System info: host: 'DESKTOP-OQC39B2', ip: '192.168.43.157', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.12'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 94.0.4606.81, chrome: {chromedriverVersion: 94.0.4606.61 (418b78f5838ed..., userDataDir: C:\Users\BESTTE~1\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61114}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: a50a2b2c21ee137c839dfcd9a2a0b9a4
-*** Element info: {Using=class name, value=excelFile}
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-	at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-	at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElementByClassName(RemoteWebDriver.java:412)
-	at org.openqa.selenium.By$ByClassName.findElement(By.java:389)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy18.getText(Unknown Source)
-	at stepDefinitions.CheckBoxStepDefinitions.excelfileButonuSeciliOldugunuDogrulayin(CheckBoxStepDefinitions.java:66)
-	at ✽.excelfile butonu secili oldugunu dogrulayin(file:///C:/Users/BEST%20TECH/IdeaProjects/demoqaProject2/src/test/resources/features/checkbox.feature:14)
+Then radioButton butonuna basiniz...........................................passed
+Then yes butonuna basiniz...................................................passed
+Then yes butonuna basinca cikan yaziyi dogrulayin...........................passed
+Then Impressive butonuna basiniz............................................passed
+Then Impressive basinca cikan yaziyi dogrulayin.............................passed
+Then Impressive basinca yes butonundan secili olmadigini dogrulayin.........passed
+And no butonuna basiniz.....................................................passed
+And no butonun seciligini dogrulayin........................................passed
 ]]>
-        </failure>
+        </system-out>
     </testcase>
 </testsuite>
