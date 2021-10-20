@@ -1,44 +1,20 @@
 [
   {
-    "line": 3,
+    "line": 2,
     "elements": [
       {
-        "start_timestamp": "2021-10-14T21:10:02.612Z",
-        "before": [
-          {
-            "result": {
-              "duration": 4073000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepDefinitions.Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 4,
-        "name": "TC01 radio buton gorunmesi",
+        "line": 3,
+        "name": "",
         "description": "",
-        "id": "us03-radiobutton;tc01-radio-buton-gorunmesi",
-        "after": [
-          {
-            "result": {
-              "duration": 875754200,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
+        "type": "background",
+        "keyword": "Background",
         "steps": [
           {
             "result": {
-              "duration": 11317980800,
+              "duration": 8201123800,
               "status": "passed"
             },
-            "line": 5,
+            "line": 4,
             "name": "demoqa anasayfaya gidin",
             "match": {
               "location": "stepDefinitions.TextBoxStepDefinitions.demoqa_anasayfaya_gidin()"
@@ -47,10 +23,10 @@
           },
           {
             "result": {
-              "duration": 448812500,
+              "duration": 410779900,
               "status": "passed"
             },
-            "line": 6,
+            "line": 5,
             "name": "elements butonuna basiniz",
             "match": {
               "location": "stepDefinitions.TextBoxStepDefinitions.elements_butonuna_basiniz()"
@@ -59,116 +35,487 @@
           },
           {
             "result": {
-              "duration": 378252100,
+              "duration": 347967400,
               "status": "passed"
             },
-            "line": 7,
-            "name": "radioButton butonuna basiniz",
+            "line": 6,
+            "name": "webTables butonuna basiniz",
             "match": {
-              "location": "stepDefinitions.RadioButtonStepDefintions.radio_button_butonuna_basiniz()"
+              "location": "stepDefinitions.WebTablesStepDefinitions.web_tables_butonuna_basiniz()"
             },
-            "keyword": "Then "
-          },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-19T20:32:47.904Z",
+        "before": [
           {
             "result": {
-              "duration": 201859000,
+              "duration": 2988000,
               "status": "passed"
             },
-            "line": 8,
-            "name": "yes butonuna basiniz",
             "match": {
-              "location": "stepDefinitions.RadioButtonStepDefintions.yes_butonuna_basiniz()"
-            },
-            "keyword": "Then "
-          },
+              "location": "stepDefinitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 22,
+        "name": "TC_01",
+        "description": "",
+        "id": ";tc-01;;2",
+        "after": [
           {
             "result": {
-              "duration": 155731700,
+              "duration": 652649000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 411524800,
               "status": "passed"
             },
             "line": 9,
-            "name": "yes butonuna basinca cikan yaziyi dogrulayin",
+            "name": "Add butonuna basiniz",
             "match": {
-              "location": "stepDefinitions.RadioButtonStepDefintions.yes_butonuna_basinca_cikan_yaziyi_dogrulayin()"
+              "location": "stepDefinitions.WebTablesStepDefinitions.add_butonuna_basiniz()"
             },
-            "keyword": "Then "
+            "keyword": "Given "
           },
           {
             "result": {
-              "duration": 529000,
+              "duration": 381650900,
               "status": "passed"
             },
             "line": 10,
-            "name": "Impressive butonuna basiniz",
+            "name": "cikan formda firstName yaziniz\"abdullah\"",
             "match": {
-              "location": "stepDefinitions.RadioButtonStepDefintions.impressive_butonuna_basiniz()"
+              "arguments": [
+                {
+                  "val": "\"abdullah\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinitions.WebTablesStepDefinitions.cikanFormdaFirstNameYazinzi(java.lang.String)"
             },
-            "keyword": "Then "
+            "keyword": "And "
           },
           {
             "result": {
-              "duration": 998600,
+              "duration": 369106800,
               "status": "passed"
             },
             "line": 11,
-            "name": "Impressive basinca cikan yaziyi dogrulayin",
+            "name": "cikan formda lastName yaziniz\"mucahit\"",
             "match": {
-              "location": "stepDefinitions.RadioButtonStepDefintions.impressive_basinca_cikan_yaziyi_dogrulayin()"
+              "arguments": [
+                {
+                  "val": "\"mucahit\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinitions.WebTablesStepDefinitions.cikanFormdaLastNameYaziniz(java.lang.String)"
             },
-            "keyword": "Then "
+            "keyword": "And "
           },
           {
             "result": {
+              "duration": 204235700,
               "status": "passed"
             },
             "line": 12,
-            "name": "Impressive basinca yes butonundan secili olmadigini dogrulayin",
+            "name": "cikan formda email giriniz\"mucahit@gmail.com\"",
             "match": {
-              "location": "stepDefinitions.RadioButtonStepDefintions.impressive_basinca_yes_butonundan_secili_olmadigini_dogrulayin()"
+              "arguments": [
+                {
+                  "val": "\"mucahit@gmail.com\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinitions.WebTablesStepDefinitions.cikanFormdaEmailGiriniz(java.lang.String)"
             },
-            "keyword": "Then "
+            "keyword": "And "
           },
           {
             "result": {
+              "duration": 252290200,
               "status": "passed"
             },
             "line": 13,
-            "name": "no butonuna basiniz",
+            "name": "cikan formda age yaziniz\"34\"",
             "match": {
-              "location": "stepDefinitions.RadioButtonStepDefintions.noButonunaBasiniz()"
+              "arguments": [
+                {
+                  "val": "\"34\"",
+                  "offset": 24
+                }
+              ],
+              "location": "stepDefinitions.WebTablesStepDefinitions.cikanFormdaAgeYaziniz(java.lang.String)"
             },
             "keyword": "And "
           },
           {
             "result": {
+              "duration": 386061700,
               "status": "passed"
             },
             "line": 14,
-            "name": "no butonun seciligini dogrulayin",
+            "name": "cikan formda salary yaziniz\"30000\"",
             "match": {
-              "location": "stepDefinitions.RadioButtonStepDefintions.noButonunSeciliginiDogrulayin()"
+              "arguments": [
+                {
+                  "val": "\"30000\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.WebTablesStepDefinitions.cikanFormdaSalaryYaziniz(java.lang.String)"
             },
             "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 236814500,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "cikan formda department yaziniz\"IT\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"IT\"",
+                  "offset": 31
+                }
+              ],
+              "location": "stepDefinitions.WebTablesStepDefinitions.cikanFormdaDepartmentYaziniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 211772700,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "submit butonuna tiklayiniz",
+            "match": {
+              "location": "stepDefinitions.WebTablesStepDefinitions.submitButonunaTiklayiniz()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 366914400,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "search butonuna firstName giriniz \"abdullah\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"abdullah\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepDefinitions.WebTablesStepDefinitions.searchButonunaFirstNameGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 130109900,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "kaydin ekledigini dogrulayiniz \"abdullah\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"abdullah\"",
+                  "offset": 31
+                }
+              ],
+              "location": "stepDefinitions.WebTablesStepDefinitions.kaydinEklediginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@radioButton"
+            "name": "@wbtables"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 6760191800,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "demoqa anasayfaya gidin",
+            "match": {
+              "location": "stepDefinitions.TextBoxStepDefinitions.demoqa_anasayfaya_gidin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 407391000,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "elements butonuna basiniz",
+            "match": {
+              "location": "stepDefinitions.TextBoxStepDefinitions.elements_butonuna_basiniz()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 331990900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "webTables butonuna basiniz",
+            "match": {
+              "location": "stepDefinitions.WebTablesStepDefinitions.web_tables_butonuna_basiniz()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-10-19T20:33:00.639Z",
+        "before": [
+          {
+            "result": {
+              "duration": 5748600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 23,
+        "name": "TC_01",
+        "description": "",
+        "id": ";tc-01;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 527653000,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 178999800,
+              "status": "passed"
+            },
+            "line": 9,
+            "name": "Add butonuna basiniz",
+            "match": {
+              "location": "stepDefinitions.WebTablesStepDefinitions.add_butonuna_basiniz()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 200675300,
+              "status": "passed"
+            },
+            "line": 10,
+            "name": "cikan formda firstName yaziniz\"zehra\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"zehra\"",
+                  "offset": 30
+                }
+              ],
+              "location": "stepDefinitions.WebTablesStepDefinitions.cikanFormdaFirstNameYazinzi(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 166094700,
+              "status": "passed"
+            },
+            "line": 11,
+            "name": "cikan formda lastName yaziniz\"bektas\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"bektas\"",
+                  "offset": 29
+                }
+              ],
+              "location": "stepDefinitions.WebTablesStepDefinitions.cikanFormdaLastNameYaziniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 265894800,
+              "status": "passed"
+            },
+            "line": 12,
+            "name": "cikan formda email giriniz\"zhra@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"zhra@gmail.com\"",
+                  "offset": 26
+                }
+              ],
+              "location": "stepDefinitions.WebTablesStepDefinitions.cikanFormdaEmailGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 257938900,
+              "status": "passed"
+            },
+            "line": 13,
+            "name": "cikan formda age yaziniz\"25\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"25\"",
+                  "offset": 24
+                }
+              ],
+              "location": "stepDefinitions.WebTablesStepDefinitions.cikanFormdaAgeYaziniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 206326500,
+              "status": "passed"
+            },
+            "line": 14,
+            "name": "cikan formda salary yaziniz\"50000\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"50000\"",
+                  "offset": 27
+                }
+              ],
+              "location": "stepDefinitions.WebTablesStepDefinitions.cikanFormdaSalaryYaziniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 354985100,
+              "status": "passed"
+            },
+            "line": 15,
+            "name": "cikan formda department yaziniz\"TESTER\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"TESTER\"",
+                  "offset": 31
+                }
+              ],
+              "location": "stepDefinitions.WebTablesStepDefinitions.cikanFormdaDepartmentYaziniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 152964900,
+              "status": "passed"
+            },
+            "line": 16,
+            "name": "submit butonuna tiklayiniz",
+            "match": {
+              "location": "stepDefinitions.WebTablesStepDefinitions.submitButonunaTiklayiniz()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 300908100,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "search butonuna firstName giriniz \"zehra\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"zehra\"",
+                  "offset": 34
+                }
+              ],
+              "location": "stepDefinitions.WebTablesStepDefinitions.searchButonunaFirstNameGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 99469200,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "kaydin ekledigini dogrulayiniz \"zehra\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"zehra\"",
+                  "offset": 31
+                }
+              ],
+              "location": "stepDefinitions.WebTablesStepDefinitions.kaydinEklediginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@wbtables"
           }
         ]
       }
     ],
-    "name": "US03 RadioButton",
+    "name": "",
     "description": "",
-    "id": "us03-radiobutton",
+    "id": "",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/US03RadioButton.feature",
+    "uri": "file:src/test/resources/features/US04_WebTablesButton.feature",
     "tags": [
       {
-        "name": "@radioButton",
+        "name": "@wbtables",
         "type": "Tag",
         "location": {
-          "line": 2,
+          "line": 1,
           "column": 1
         }
       }

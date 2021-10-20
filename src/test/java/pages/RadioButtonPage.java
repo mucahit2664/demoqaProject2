@@ -19,8 +19,11 @@ public class RadioButtonPage {
     @FindBy(xpath = "//span[@class='text-success']")
     public WebElement yesYaziyiDogrulama;
 
-    @FindBy(id = "impressiveRadio")
-public WebElement impressive;
+    @FindBy(xpath = "(//label[@class='custom-control-label'])[2]")
+    public WebElement impressive;
 
+
+    @FindBy(xpath = "//label[@class='custom-control-input disabled']")
+    public WebElement noButton;
 
 }
