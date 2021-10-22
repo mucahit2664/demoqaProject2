@@ -6,7 +6,7 @@ Feature: US03_RadioButton
     And radioButton butonuna basiniz
   Scenario: TC01
 
-    And yes butonuna basiniz
+    And yes buttonunu  tiklayiniz
     Then yes butonuna basinca cikan yaziyi dogrulayin
 
 
@@ -18,4 +18,5 @@ Feature: US03_RadioButton
 
 
   Scenario: TC03
+Then No butonunu seciniz
     Then No butonunun secildigini  dogrulayiniz

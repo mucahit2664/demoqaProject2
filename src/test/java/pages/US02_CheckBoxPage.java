@@ -8,9 +8,9 @@ import utilities.Driver;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CheckBoxPage {
+public class US02_CheckBoxPage {
 
-    public CheckBoxPage() {
+    public US02_CheckBoxPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
     @FindBy(xpath ="//span[.='Check Box']")

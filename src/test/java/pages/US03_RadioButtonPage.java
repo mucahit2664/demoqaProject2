@@ -5,17 +5,20 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class RadioButtonPage {
+public class US03_RadioButtonPage {
 
 
-    public RadioButtonPage(){
+    public US03_RadioButtonPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
 
-@FindBy(xpath = "//span[.='Radio Button']")
-    public WebElement radioButton;
+    @FindBy(xpath ="//span[.='Radio Button']")
+    public WebElement radioButtonMenuLink;
+
+
     @FindBy(xpath = "(//label[@class='custom-control-label'])[1]")
     public WebElement yes;
+
     @FindBy(xpath = "//span[@class='text-success']")
     public WebElement yesYaziyiDogrulama;
 
@@ -25,5 +28,6 @@ public class RadioButtonPage {
 
     @FindBy(xpath = "//label[@class='custom-control-input disabled']")
     public WebElement noButton;
+
 
 }

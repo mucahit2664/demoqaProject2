@@ -5,10 +5,10 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import utilities.Driver;
 
-public class TextBoxPage {
+public class US01_TextBoxPage {
 
 
-    public TextBoxPage() {
+    public US01_TextBoxPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 

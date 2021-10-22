@@ -1,39 +1,22 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="2" time="23.296">
-    <testcase classname="Unknown" name="TC_01" time="12.678">
-        <system-out>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="17.916">
+    <testcase classname="Unknown" name="TC_03_Delete" time="17.662">
+        <failure message="" type="java.lang.AssertionError">
             <![CDATA[Given demoqa anasayfaya gidin...............................................passed
 Then elements butonuna basiniz..............................................passed
 And webTables butonuna basiniz..............................................passed
-Given Add butonuna basiniz..................................................passed
-And cikan formda firstName yaziniz"abdullah"................................passed
-And cikan formda lastName yaziniz"mucahit"..................................passed
-And cikan formda email giriniz"mucahit@gmail.com"...........................passed
-And cikan formda age yaziniz"34"............................................passed
-And cikan formda salary yaziniz"30000"......................................passed
-And cikan formda department yaziniz"IT".....................................passed
-And submit butonuna tiklayiniz..............................................passed
-And search butonuna firstName giriniz "abdullah"............................passed
-Then kaydin ekledigini dogrulayiniz "abdullah"..............................passed
+Given delete butonuna basiniz...............................................passed
+And kaydin silindigini dogrulayin...........................................failed
+
+StackTrace:
+java.lang.AssertionError
+	at org.junit.Assert.fail(Assert.java:87)
+	at org.junit.Assert.assertTrue(Assert.java:42)
+	at org.junit.Assert.assertFalse(Assert.java:65)
+	at org.junit.Assert.assertFalse(Assert.java:75)
+	at stepDefinitions.WebTablesStepDefinitions.kaydinSilindiginiDogrulayin(WebTablesStepDefinitions.java:114)
+	at ✽.kaydin silindigini dogrulayin(file:///C:/Users/BEST%20TECH/IdeaProjects/demoqaProject2/src/test/resources/features/US04_WebTablesButton.feature:39)
 ]]>
-        </system-out>
-    </testcase>
-    <testcase classname="Unknown" name="TC_01_2" time="10.232">
-        <system-out>
-            <![CDATA[Given demoqa anasayfaya gidin...............................................passed
-Then elements butonuna basiniz..............................................passed
-And webTables butonuna basiniz..............................................passed
-Given Add butonuna basiniz..................................................passed
-And cikan formda firstName yaziniz"zehra"...................................passed
-And cikan formda lastName yaziniz"bektas"...................................passed
-And cikan formda email giriniz"zhra@gmail.com"..............................passed
-And cikan formda age yaziniz"25"............................................passed
-And cikan formda salary yaziniz"50000"......................................passed
-And cikan formda department yaziniz"TESTER".................................passed
-And submit butonuna tiklayiniz..............................................passed
-And search butonuna firstName giriniz "zehra"...............................passed
-Then kaydin ekledigini dogrulayiniz "zehra".................................passed
-]]>
-        </system-out>
+        </failure>
     </testcase>
 </testsuite>
