@@ -31,7 +31,7 @@ Feature:TextBox
       | melik  | as@gmail.com    | 12345   | kedi       |
       | said   | der@gmail.com   | adres5  | 2345       |
 
-  Scenario Outline:tc04
+  Scenario Outline:tc04_Negative_Scenario
     And Name  giriniz "<isim>"
     And email giriniz "<email>"
     And currentadres giriniz "<adresa>"

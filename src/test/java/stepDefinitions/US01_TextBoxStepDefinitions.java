@@ -5,14 +5,14 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
-import pages.TextBoxPage;
+import pages.US01_TextBoxPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
 
-public class TextBoxStepDefinitions {
-    TextBoxPage textBoxPage = new TextBoxPage();
+public class US01_TextBoxStepDefinitions {
+    US01_TextBoxPage textBoxPage = new US01_TextBoxPage();
     Actions actions = new Actions(Driver.getDriver());
 
 
