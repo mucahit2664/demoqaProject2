@@ -8,9 +8,9 @@ import utilities.Driver;
 import java.util.ArrayList;
 import java.util.List;
 
-public class CheckBoxPage {
+public class US02_CheckBoxPage {
 
-    public CheckBoxPage() {
+    public US02_CheckBoxPage() {
         PageFactory.initElements(Driver.getDriver(), this);
     }
     @FindBy(xpath ="//span[.='Check Box']")
@@ -28,12 +28,19 @@ public class CheckBoxPage {
 
     @FindBy(xpath= "//button[@class='rct-option rct-option-collapse-all']")
     public WebElement Checkboxeksi;
-    @FindBy(xpath = "//*[@class='rct-icon rct-icon-parent-close']")
-    public WebElement CheckboxEksiDogrulama;
+
+    @FindBy(xpath= "//button[@class='rct-option rct-option-expand-all']")
+    public WebElement eksiDogrulama;
+
+
+
     @FindBy(xpath= "//span[text()='Excel File.doc']")
     public WebElement excelFile;
 
 
     @FindBy(xpath= "//span[@class='text-success']")
     public WebElement succeskontrol;
+
+
+
 }

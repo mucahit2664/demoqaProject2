@@ -5,36 +5,34 @@ import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
-import pages.TextBoxPage;
+import pages.US01_TextBoxPage;
 import utilities.ConfigReader;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import java.awt.*;
 
-public class TextBoxStepDefinitions {
-    TextBoxPage textBoxPage = new TextBoxPage();
+public class US01_TextBoxStepDefinitions {
+    US01_TextBoxPage textBoxPage = new US01_TextBoxPage();
     Actions actions = new Actions(Driver.getDriver());
 
-
     @Given("demoqa anasayfaya gidin")
-    public void demoqa_anasayfaya_gidin() {
+    public void demoqa_anasayfaya_gidin() throws AWTException {
         Driver.getDriver().get(ConfigReader.getProperty("demoqa_url"));
+        // Driver.getDriver().manage().window().maximize();
     }
 
     @Then("elements butonuna basiniz")
     public void elements_butonuna_basiniz() {
-
         textBoxPage.elementsCard.click();
-        // textBoxPage.elementsMenu.click();
-//actions.sendKeys(Keys.PAGE_DOWN).perform();
 
     }
-
     @Then("textbox butonuna tiklayiniz")
     public void textbox_butonuna_tiklayiniz() {
-        //ReusableMethods.waitFor(2);
+        // textBoxPage.elementsMenu.click();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        ReusableMethods.waitFor(1);
         textBoxPage.textBoxMenuLink.click();
-
     }
     @Then("Fullname giriniz")
     public void fullname_giriniz() {
@@ -54,8 +52,20 @@ public class TextBoxStepDefinitions {
     public void adres2_giriniz () {
         textBoxPage.permanentAddressTextBox.sendKeys(ConfigReader.getProperty("permanentAdress"));
     }
+    @Then("submit butonuna tiklayin")
+    public void submit_butonuna_tiklayin () {
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+
+        ReusableMethods.waitFor(1);
+        textBoxPage.submitButton.click();
+        ReusableMethods.waitFor(1);
+    }
+
+
+
+
     @Then("giris isleminin tamamlandigini dogrulayin")
-    public void giris_isleminin_tamamlandigini_dogrulayin() {
+    public void giris_isleminin_tamamlandigini_dogrulayin () {
         Assert.assertTrue(textBoxPage.formKayit.isDisplayed());
 
         System.out.println(textBoxPage.formKayit.getText());
@@ -70,21 +80,21 @@ public class TextBoxStepDefinitions {
     @And("email giriniz {string}")
     public void emailGiriniz(String arg0) {
         textBoxPage.emailTextBox.sendKeys(arg0);
-        ReusableMethods.waitFor(1);
+        //ReusableMethods.waitFor(1);
 
     }
 
     @And("Name  giriniz {string}")
     public void tenameGiriniz(String arg0) {
         textBoxPage.fullnameTextBox.sendKeys(arg0);
-        ReusableMethods.waitFor(1);
+        // ReusableMethods.waitFor(1);
 
     }
 
     @And("currentadres giriniz {string}")
     public void currentadresGiriniz(String arg0) {
         textBoxPage.currentAdressTextBox.sendKeys(arg0);
-        ReusableMethods.waitFor(1);
+        //  ReusableMethods.waitFor(1);
     }
 
     @And("PermanentAdres giriniz {string}")
@@ -116,13 +126,6 @@ public class TextBoxStepDefinitions {
         Assert.assertTrue(textBoxPage.formKayit.getText().contains(arg0));
         ReusableMethods.waitFor(2);
     }
-    @Then("submit butonuna tiklayin")
-    public void submit_butonuna_tiklayin () {
-
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        ReusableMethods.waitFor(1);
-        textBoxPage.submitButton.click();
-    }
 
 
     @Then("mail onaylanmadigini dogrulayiniz {string}")
@@ -132,7 +135,8 @@ public class TextBoxStepDefinitions {
         ReusableMethods.waitFor(3);
         Assert.assertTrue(textBoxPage.mailHata.isDisplayed());
 
-        System.out.println(arg0 + " girildi fakat  " + textBoxPage.mailHata.getAttribute("value") + " gecerli bir mail degil");
+        System.out.println(arg0+" girildi fakat  "+textBoxPage.mailHata.getAttribute("value")+" gecerli bir mail degil");
 
     }
+
 }

@@ -3,11 +3,11 @@ Feature: US03_RadioButton
   Background:
     Given demoqa anasayfaya gidin
     Then elements butonuna basiniz
-    And radioButton butonuna basiniz
+    And radiobox butonuna tiklayiniz
   Scenario: TC01
 
-    And yes butonuna basiniz
-    Then yes butonuna basinca cikan yaziyi dogrulayin
+    And yes Buttonunu tiklayiniz
+    Then Yes secildigini dogrulayiniz
 
 
 
@@ -19,3 +19,4 @@ Feature: US03_RadioButton
 
   Scenario: TC03
     Then No butonunun secildigini  dogrulayiniz
+
