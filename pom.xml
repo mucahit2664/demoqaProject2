@@ -180,7 +180,7 @@
                             <goal>generate</goal>
                         </goals>
                         <configuration>
-                            <projectName>GMIBANK PROJECT</projectName>
+                            <projectName>DEMOQA PROJECT</projectName>
                             <outputDirectory>${project.build.directory}</outputDirectory>
                             <inputDirectory>${project.build.directory}</inputDirectory>
                             <jsonFiles>
