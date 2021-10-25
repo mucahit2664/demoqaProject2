@@ -19,7 +19,7 @@ public class US03_RadioButtonStepDefinitions {
 
     @Then("radiobox butonuna tiklayiniz")
     public void radiobox_butonuna_tiklayiniz() {
-        radioButtonPage.radioButtonMenuLink.click();
+      radioButtonPage.radioButtonMenuLink.click();
     }
 
 
@@ -27,7 +27,7 @@ public class US03_RadioButtonStepDefinitions {
 
     @Then("yes Buttonunu tiklayiniz")
     public void yes_buttonunu_tiklayiniz() {
-        radioButtonPage.yes.click();
+      radioButtonPage.yes.click();
     }
     @Then("Yes secildigini dogrulayiniz")
     public void yes_secildigini_dogrulayiniz() {
@@ -38,7 +38,7 @@ public class US03_RadioButtonStepDefinitions {
 
     @Given("Impresive butonuna tiklayiniz")
     public void impresive_butonuna_tiklayiniz() {
-        radioButtonPage.impressive.click();
+radioButtonPage.impressive.click();
     }
 
     @Then("İmpersive yazisini dogrulayiniz")
@@ -48,7 +48,7 @@ public class US03_RadioButtonStepDefinitions {
     }
     @Then("Yes butonunun secili olmadigini dogrulayin")
     public void yes_butonunun_secili_olmadigini_dogrulayin() {
-        Assert.assertFalse(radioButtonPage.yes.isSelected());
+Assert.assertFalse(radioButtonPage.yes.isSelected());
     }
     @Then("no butonunu seciniz")
     public void no_butonunu_seciniz() {
@@ -59,11 +59,11 @@ public class US03_RadioButtonStepDefinitions {
             System.out.println("burada bug var No butonu kullanılamıyor");
 
 
-        }}
+    }}
     @Then("no butonunun secildigini  dogrulayiniz")
     public void no_butonunun_secildigini_dogrulayiniz() {
         SoftAssert softAssert=new SoftAssert();
-        softAssert.assertTrue(radioButtonPage.noButton.isEnabled(),"çalışmıyor");
+        softAssert.assertTrue(radioButtonPage.noButton.isEnabled(),"çalışömıyor");
 
     }
 }

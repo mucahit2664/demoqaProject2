@@ -15,6 +15,7 @@ Feature: US04_WebTables
     And search butonuna firstName giriniz "<firstname>"
     Then  kaydin ekledigini dogrulayiniz "<firstname>"
 
+
     Examples:
       | firstname | lastName | email             | age | salary | department |
       | abdullah  | mucahit  | mucahit@gmail.com | 34  | 30000  | IT         |
@@ -40,5 +41,6 @@ Feature: US04_WebTables
 
   Scenario: TC04 liste
     And liste olustur
+
 
 

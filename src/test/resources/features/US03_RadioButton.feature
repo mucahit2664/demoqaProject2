@@ -6,8 +6,10 @@ Feature: US03_RadioButton
     And radiobox butonuna tiklayiniz
   Scenario: TC01
 
+
     And yes Buttonunu tiklayiniz
     Then Yes secildigini dogrulayiniz
+
 
 
 
@@ -18,5 +20,8 @@ Feature: US03_RadioButton
 
 
   Scenario: TC03
-    Then No butonunun secildigini  dogrulayiniz
+    And no butonunu seciniz
+    Then no butonunun secildigini  dogrulayiniz
+
+
 

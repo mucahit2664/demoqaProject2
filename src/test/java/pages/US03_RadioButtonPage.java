@@ -8,8 +8,10 @@ import utilities.Driver;
 public class US03_RadioButtonPage {
 
 
+
     public US03_RadioButtonPage() {
         PageFactory.initElements(Driver.getDriver(), this);
+
     }
 
     @FindBy(xpath ="//span[.='Radio Button']")
@@ -28,7 +30,6 @@ public class US03_RadioButtonPage {
 
     @FindBy(xpath = "//label[@class='custom-control-input disabled']")
     public WebElement noButton;
-
 
 
 

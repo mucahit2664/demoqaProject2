@@ -9,7 +9,9 @@ import utilities.Driver;
 
 
 
+
 public class US04_WebTablesPage {
+
     public US04_WebTablesPage(){
         PageFactory.initElements(Driver.getDriver(),this);
     }
@@ -41,12 +43,7 @@ public class US04_WebTablesPage {
 
     @FindBy(id="delete-record-1")
     public WebElement sil;
+
 }
-
-
-
-
-
-
 
 

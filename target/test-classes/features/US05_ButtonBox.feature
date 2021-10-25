@@ -1,10 +1,9 @@
 Feature: US05_ButtonBox
 
   Background:
-Given demoqa anasayfaya gidin
-Then elements butonuna basiniz
-And Buttons butonuna basiniz
-
+    Given demoqa anasayfaya gidin
+    Then elements butonuna basiniz
+    And Buttons butonuna basiniz
 
 
   Scenario: TC_01_DOUBLE_CLICK_ME
@@ -19,7 +18,5 @@ And Buttons butonuna basiniz
     And click me butonuna basiniz
     And clickme butonuna basildigini dogrulayiniz
 
-
-    Scenario:TC_04_BUTTONSDISPLAY
-      And Buttons yazisinin gorunurlugunu basildigini Dogrulayiniz
-
+  Scenario:TC_04_BUTTONSDISPLAY
+    And Buttons yazisinin gorunurlugunu basildigini Dogrulayiniz
