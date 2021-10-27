@@ -9,6 +9,10 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import pages.US02_CheckBoxPage;
 import utilities.Driver;
+import utilities.ReusableMethods;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class US02_CheckBoxDefinitions {
     US02_CheckBoxPage checkBoxPage = new US02_CheckBoxPage();
@@ -16,41 +20,48 @@ public class US02_CheckBoxDefinitions {
 
 
 
-    @Then("checktbox butonuna tiklayiniz")
-    public void checktbox_butonuna_tiklayiniz() {
+    @Then("checkbox butonuna tiklayiniz")
+    public void checkboxbutonunatiklayiniz() {
         checkBoxPage.checkBoxMenuLink.click();
     }
 
-    @Then("+ butonuna basınız")
-    public void butonuna_basınız() {
+    @Then("sum butona basiniz")
+    public void sumbutonabasiniz() {
         checkBoxPage.Checkboxarti.click();
     }
 
-    @Then("butun mnenunun acildigini dogrulayin")
-    public void butun_mnenunun_acildigini_dogrulayin() {
-        for(int i =1; i<=17; i++ ) {
+    @Then("menunun acik oldugunu dogrulayiniz")
+    public void menununacikoldugunudogrulayiniz() {
+     /*   for(int i =1; i<=17; i++ ) {
             String xpathInput= "(//input)[" + i + "]"; //  (//input)[17]
             System.out.println( "Xpath Kontrol: " + xpathInput);
             WebElement checkbox = Driver.getDriver().findElement(By.xpath(xpathInput));
-            Assert.assertTrue(checkbox.isEnabled());
-        } }
 
-    @Then("eksibutonuna basiniz")
-    public void eksibutonuna_basiniz() {
-        checkBoxPage.Checkboxeksi.click();
+            Assert.assertTrue(checkbox.isEnabled());*/
+        List<WebElement> elems=Driver.getDriver().findElements(By.xpath("//li[@class='rct-node rct-node-leaf']"));
+        List list=new ArrayList();
+        list= ReusableMethods.getElementsText(elems);
+        System.out.println(list);
     }
 
-
-    @Then("menunun kapalı oldugunu dogrulayiniz")
-    public void menunun_kapalı_oldugunu_dogrulayiniz() {
+    @Then("eksi butonunu tiklayiniz")
+    public void eksibutonunutiklayiniz() {
+        checkBoxPage.Checkboxeksi.click();
+    }
+    @Then("menunun kapali oldugunu dogrulayiniz")
+    public void menunun_kapali_oldugunu_dogrulayiniz() {
         Assert.assertTrue(checkBoxPage.eksiDogrulama.isDisplayed());
         System.out.println("MENU KAPALI");
     }
 
-    @And("ExcelFile seciniz")
-    public void excelfileSeciniz() {
-        Driver.getDriver().manage().window().maximize();
+
+
+
+    @And("excel file seciniz")
+    public void excelfileseciniz() {
+
         actions.sendKeys(Keys.PAGE_DOWN).perform();
+        ReusableMethods.waitFor(1);
         checkBoxPage.excelFile.click();
     }
 

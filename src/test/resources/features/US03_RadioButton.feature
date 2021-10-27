@@ -14,9 +14,10 @@ Feature: US03_RadioButton
 
 
   Scenario: TC02
-    And Impresive butonuna tiklayiniz
-    Then İmpersive yazisini dogrulayiniz
-    Then Yes butonunun secili olmadigini dogrulayin
+    And impresive butonuna tiklayiniz
+    Then impresive yazisini dogrulayiniz
+    Then yes buton tikli olmadigini dogrulayin
+
 
 
   Scenario: TC03

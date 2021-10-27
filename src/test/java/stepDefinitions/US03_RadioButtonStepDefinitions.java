@@ -36,18 +36,18 @@ public class US03_RadioButtonStepDefinitions {
     }
 
 
-    @Given("Impresive butonuna tiklayiniz")
+    @Given("impresive butonuna tiklayiniz")
     public void impresive_butonuna_tiklayiniz() {
         radioButtonPage.impressive.click();
     }
 
-    @Then("İmpersive yazisini dogrulayiniz")
-    public void i̇mpersive_yazisini_dogrulayiniz() {
+    @Then("impresive yazisini dogrulayiniz")
+    public void iimpresive_yazisini_dogrulayiniz() {
         Assert.assertTrue(radioButtonPage.yesYaziyiDogrulama.getText().contains("Impressive"));
         System.out.println(radioButtonPage.yesYaziyiDogrulama.getText());
     }
-    @Then("Yes butonunun secili olmadigini dogrulayin")
-    public void yes_butonunun_secili_olmadigini_dogrulayin() {
+    @Then("yes buton tikli olmadigini dogrulayin")
+    public void yesbutontikliolmadiginidogrulayin() {
         Assert.assertFalse(radioButtonPage.yes.isSelected());
     }
     @Then("no butonunu seciniz")

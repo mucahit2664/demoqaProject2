@@ -58,10 +58,6 @@ uS05_ButtonBoxPage.button.click();
         Assert.assertTrue(uS05_ButtonBoxPage.dynamicClickMessage.getText().equals("You have done a dynamic click"));
     }
 
-    @And("Buttons yazisinin gorunurlugunu basildigini Dogrulayiniz")
-    public void buttonsYazisininGorunurlugunuBasildiginiDogrulayiniz() {
-        System.out.println(uS05_ButtonBoxPage.yaziButton.getText());
-        Assert.assertFalse(uS05_ButtonBoxPage.yaziButton.getText().equals("BUTTONS"));
-    }
+
 }
 
