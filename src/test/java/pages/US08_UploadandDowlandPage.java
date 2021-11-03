@@ -16,7 +16,13 @@ public class US08_UploadandDowlandPage {
     @FindBy(xpath ="//span[.='Upload and Download']")
     public WebElement UploadandDownload;
 
-    @FindBy(xpath = "//label[@class='form-file-label']")
+    @FindBy(xpath = "//input[@id='uploadFile']")
     public WebElement uploadFile;
 
+
+     @FindBy(linkText = "Download")
+    public WebElement downloadButton;
+
+    @FindBy(id = "uploadedFilePath")
+    public  WebElement choosefileTexti;
 }
