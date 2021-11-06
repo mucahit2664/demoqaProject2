@@ -13,6 +13,9 @@ import pages.US09_DynamicPropertiesPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class US09_DynamicPropertiesStepDefitions {
 US09_DynamicPropertiesPage us09_dynamicPropertiesPage=new US09_DynamicPropertiesPage();
 Actions actions=new Actions(Driver.getDriver());
@@ -41,7 +44,18 @@ us09_dynamicPropertiesPage.dynamicProperties.click();
     @Then("This text has random Id isimli Text Box sayfa her yenilendiginde farkli bir ID value'sune sahip oldugunu dogrulayin")
     public void this_text_has_random_id_isimli_text_box_sayfa_her_yenilendiginde_farkli_bir_id_value_sune_sahip_oldugunu_dogrulayin() {
 
-
+        List<String>randomList=new ArrayList<>();
+        int i= 0;
+        for (int j = 1; j < 4; j++) {
+            String idValue=us09_dynamicPropertiesPage.randomText.getAttribute("id");
+            System.out.println(idValue);
+            if (!randomList.contains(idValue)){
+                randomList.add(idValue);
+                i++;
+            }
+            Driver.getDriver().navigate().refresh();
+        }
+        Assert.assertEquals(randomList.size(),i);
 
 
 
@@ -62,7 +76,7 @@ String color1=us09_dynamicPropertiesPage.colorChangeButton.getCssValue("color");
         System.out.println(color2);
         String colorHex2 = Color.fromString(color2).asHex();
         System.out.println(colorHex2);
-        Assert.assertEquals(colorHex2, "#ea8790");
+        Assert.assertEquals(colorHex2, "#dc3545");
     }
 
     @Then("Visible After {int} Seconds isimli butonun sayfa yuklendiginde goruntulenemez oldugunu ve {int} sn sonra goruntulenebilir oldugunu dogrulayin")
@@ -76,10 +90,15 @@ String color1=us09_dynamicPropertiesPage.colorChangeButton.getCssValue("color");
             isNotDisplayed = true;
         }
         System.out.println(isNotDisplayed);
-        Assert.assertTrue(isNotDisplayed);
+        Assert.assertFalse(isNotDisplayed);
         WebDriverWait wait = new WebDriverWait(Driver.getDriver(), 5);
         wait.until(ExpectedConditions.visibilityOf(us09_dynamicPropertiesPage.visibleButton));
         Assert.assertTrue(us09_dynamicPropertiesPage.visibleButton.isDisplayed());
+
+
+
+
+
     }
 
     }

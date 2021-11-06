@@ -18,7 +18,8 @@ public class US09_DynamicPropertiesPage {
     public WebElement enableButton;
 @FindBy(xpath ="//button[@id='colorChange']")
     public WebElement colorChangeButton;
-    @FindBy(id = "visibleAfter")
+    @FindBy(xpath ="//button[@id='visibleAfter']")
     public WebElement visibleButton;
-
+    @FindBy(xpath = "//*[.='This text has random Id']")
+    public WebElement randomText;
 }

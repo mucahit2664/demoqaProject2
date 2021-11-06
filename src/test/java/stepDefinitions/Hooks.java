@@ -24,6 +24,6 @@ scenario.attach(screenshot,"image/png","screenshots");
             //scenario.embed(screenshot,"image/png");
         }
 
-       Driver.closeDriver();
+     Driver.closeDriver();
     }
 }

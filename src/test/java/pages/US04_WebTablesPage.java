@@ -29,7 +29,7 @@ public class US04_WebTablesPage {
     public WebElement salary;
     @FindBy(id="department")
     public WebElement department;
-    @FindBy(id="submit")
+    @FindBy(xpath="//button[@id='submit']")
     public WebElement submit;
     @FindBy(id="searchBox")
     public WebElement seaarch;
