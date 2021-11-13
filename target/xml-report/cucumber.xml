@@ -1,22 +1,32 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="17.916">
-    <testcase classname="Unknown" name="TC_03_Delete" time="17.662">
-        <failure message="" type="java.lang.AssertionError">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="38.609">
+    <testcase classname="US07_BrokenLinks" name="Tc01_validimage" time="11.996">
+        <system-out>
             <![CDATA[Given demoqa anasayfaya gidin...............................................passed
 Then elements butonuna basiniz..............................................passed
-And webTables butonuna basiniz..............................................passed
-Given delete butonuna basiniz...............................................passed
-And kaydin silindigini dogrulayin...........................................failed
-
-StackTrace:
-java.lang.AssertionError
-	at org.junit.Assert.fail(Assert.java:87)
-	at org.junit.Assert.assertTrue(Assert.java:42)
-	at org.junit.Assert.assertFalse(Assert.java:65)
-	at org.junit.Assert.assertFalse(Assert.java:75)
-	at stepDefinitions.WebTablesStepDefinitions.kaydinSilindiginiDogrulayin(WebTablesStepDefinitions.java:114)
-	at ✽.kaydin silindigini dogrulayin(file:///C:/Users/BEST%20TECH/IdeaProjects/demoqaProject2/src/test/resources/features/US04_WebTablesButton.feature:39)
+And Broken links butonuna tiklayiniz........................................passed
+Then valid image gorunurlugunu dogrulayiniz.................................passed
 ]]>
-        </failure>
+        </system-out>
+    </testcase>
+    <testcase classname="US07_BrokenLinks" name="TC02_validLink" time="11.941">
+        <system-out>
+            <![CDATA[Given demoqa anasayfaya gidin...............................................passed
+Then elements butonuna basiniz..............................................passed
+And Broken links butonuna tiklayiniz........................................passed
+Then Click Here for Valid Link tiklayiniz...................................passed
+Then tikladiktan sonra anasayfaya gittigini dogrulayiniz....................passed
+]]>
+        </system-out>
+    </testcase>
+    <testcase classname="US07_BrokenLinks" name="TC03_Click Here for Broken Link" time="14.126">
+        <system-out>
+            <![CDATA[Given demoqa anasayfaya gidin...............................................passed
+Then elements butonuna basiniz..............................................passed
+And Broken links butonuna tiklayiniz........................................passed
+Then Click Here for Broken Link tiklayiniz..................................passed
+Then tikladiktan sonra sayfanin hata kodu verdigini dogrulayiniz............passed
+]]>
+        </system-out>
     </testcase>
 </testsuite>
