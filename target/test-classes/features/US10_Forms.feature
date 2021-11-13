@@ -11,32 +11,21 @@ Feature: US10_Forms.feature
 
     Then Kullanici acilan sayfada Student Registration Form oldugunu dogrular.
 
-      Scenario: TC_02_firstname_bilgisii girilmeli
-        And Kullanici acilan sayfada firstname bilgisini girer.
-        And submid butonuna tiklayiniz
-        And firstname kabul edildigini dogrulayiniz
-    Scenario: TC_03_invalidfirstname
-      And firstname bos birakilmamalidir
-      And submit butonuna tiklayiniz
-      Then firsatname bos birakilamadigini dogrulayin
-  Scenario: TC_04_lastname_bilgisini_girmeli
-    Then Kullanici acilan sayfada lastname bilgisini girer.
-    And submit butonuna tiklayiniz
-    And lastname kabul edildigini dogrulayiniz
-    Scenario: TC_05_invalidLastname
-      Then lastname bos birakilmamalidir
-      And submit butonuna tiklayiniz
-      Then lastname bos birakilamadigini dogrulayin
-  Scenario: TC_06_Ogrenci_email_bilgisini_verilen_sartlara_uygun_girmelidir.
-     Given Kullanici email bilgisini .'@, seklinde girmek zorundadir.
-    And submit butonuna tiklayiniz
-  Then  email dogru girldigini dogrulayin
+  Scenario: TC02_Valid degerlerle dogrulama yapin
 
-    Scenario: TC_07_email bilgiisi"@" icermelidir
-      Then Kullanici email bilgisini at olmadan girer
-      And submit butonuna tiklayiniz
-      Then kabul edilmedigini dogrular
-  Scenario: TC_08_email bilgiisi"." icermelidir
-    Then Kullanici email bilgisini nokta olmadan girer
-    And submit butonuna tiklayiniz
-    Then kabul edilmedigini dogrular
+
+    And FirstName yaziniz  "abdullah"
+    And LastName yaziniz  "yalcin"
+    And Email giriniz "mucahit@gmail.com"
+    And cinsiyet seciniz "rastgele"
+    And valid telefon giriniz "1234567890"
+    And valid dogum tarihi giriniz "06 Apr 2000"
+    And subject Giriniz
+    And Hobby seciniz 2
+    And Resim seciniz
+
+    And Current Adres giriniz
+    And State seciniz
+    And City seciniz
+    Then Submiti Tiklayin
+    Then Onaylandigini dogrulayin

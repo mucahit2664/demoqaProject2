@@ -19,7 +19,7 @@ public class US10_FormsPage {
     @FindBy(xpath="//span[.='Practice Form']")
     public WebElement practiseForm;
 
-    @FindBy(xpath = "//h5[.='Student Registration Form']")
+    @FindBy(xpath="//h5[.='Student Registration Form']")
     public WebElement sayfaDogrulama;
 
 
@@ -32,13 +32,13 @@ public class US10_FormsPage {
     @FindBy(id="userEmail")
     public WebElement userEmail;
 
-    @FindBy(xpath ="//input[@id='gender-radio-1']")
+    @FindBy(xpath ="//*[ text() ='Male']")
     public WebElement genderRadio1;
 
-    @FindBy(id ="gender-radio-2")
+    @FindBy(xpath ="//*[ text() ='Female']")
     public WebElement genderRadio2;
 
-    @FindBy(id ="gender-radio-3")
+    @FindBy(xpath ="//*[ text() ='Other']")
     public WebElement genderRadio3;
 
 
@@ -48,30 +48,62 @@ public class US10_FormsPage {
     @FindBy(id ="dateOfBirthInput")
     public WebElement dateOfBirthInput;
 
-    @FindBy(id ="subjectsContainer")
+
+    @FindBy(id ="subjectsInput")
     public WebElement subjectsContainer;
 
-    @FindBy(id ="hobbies-checkbox-1")
+    @FindBy(xpath ="//*[ text() ='Sports']")
     public WebElement sportCheckbox1;
+    @FindBy(xpath ="//*[ text() ='Reading']")
+    public WebElement readingCheckbox2;
 
-    @FindBy(id ="hobbies-checkbox-2")
-    public WebElement readingCheckbox1;
-
-    @FindBy(id ="hobbies-checkbox-3")
+    @FindBy(xpath ="//*[ text() ='Music']")
     public WebElement musicCheckbox;
 
-    @FindBy(id ="uploadPicture")
+    @FindBy(xpath="//input[@class='form-control-file']")
     public WebElement uploadPicture;
+
 
     @FindBy(id ="currentAddress")
     public WebElement currentAddress;
 
-    @FindBy(id ="state")
+    @FindBy(id = "react-select-3-input")
     public WebElement state;
 
-    @FindBy(id ="city")
+    @FindBy(id = "react-select-4-input")
     public WebElement city;
 
-    @FindBy(id ="submit")
+    @FindBy(xpath ="( //div[@class=' css-1uccc91-singleValue'])[1]")
+    public WebElement stateTik;
+    @FindBy(xpath ="( //div[@class=' css-1uccc91-singleValue'])[2]")
+    public WebElement cityTik;
+    @FindBy (id ="example-modal-sizes-title-lg")
+    public WebElement sonucBaslik;
+    @FindBy(xpath="//button[@id='submit']")
     public WebElement submit;
+
+    @FindBy(xpath="//*[@class='table table-dark table-striped table-bordered table-hover']/tbody/tr[5]/td[2]")
+    public WebElement birtDaySonuc;
+
+    @FindBy(xpath="//*[@class='table table-dark table-striped table-bordered table-hover']/tbody/tr[6]/td[2]")
+    public WebElement subjectSonuc;
+
+
+    @FindBy(xpath="//*[@class='table table-dark table-striped table-bordered table-hover']/tbody/tr[7]/td[2]")
+    public WebElement hobbiesSonuc;
+
+    @FindBy(xpath="//*[@class='table table-dark table-striped table-bordered table-hover']/tbody/tr[8]/td[2]")
+    public WebElement dosyaSecSonuc;
+
+    @FindBy(xpath="//select[@class='react-datepicker__month-select']")
+    public WebElement selectAy;
+
+    @FindBy(xpath="//select[@class='react-datepicker__year-select']")
+    public WebElement selectYil;
+
+    @FindBy(xpath = "(//*[contains(@class,'react-datepicker')])[35]")
+    public WebElement selectGun;
+
+    @FindBy(xpath="//div[@class='css-12jo7m5 subjects-auto-complete__multi-value__label']")
+    public WebElement subjectListe;
 }
