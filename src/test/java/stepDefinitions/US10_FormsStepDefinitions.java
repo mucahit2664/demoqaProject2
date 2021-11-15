@@ -44,12 +44,11 @@ Actions actions=new Actions(Driver.getDriver());
 
     @Given("firstname kabul edildigini dogrulayiniz")
     public void firstname_kabul_edildigini_dogrulayiniz() {
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        us10_formsPage.submit.click();
-        String color1=us10_formsPage.firstName.getCssValue("border-color");
-        System.out.println(color1);
 
-        String colorHex = Color.fromString(color1).asHex();
+        String colorFirst=us10_formsPage.firstName.getCssValue("border-color");
+
+
+        String colorHex = Color.fromString(colorFirst).asHex();
         System.out.println(colorHex);
         Assert.assertEquals(colorHex,"#28a745");
     }
@@ -66,12 +65,11 @@ Actions actions=new Actions(Driver.getDriver());
 
     @Then("kabul edilmedigini dogrular")
     public void kabul_edilmedigini_dogrular() {
-        actions.sendKeys(Keys.PAGE_DOWN).perform();
-        us10_formsPage.submit.click();
-        String color1=us10_formsPage.userEmail.getCssValue("border-color");
-        System.out.println(color1);
 
-        String colorHex = Color.fromString(color1).asHex();
+        String colorNokta=us10_formsPage.userEmail.getCssValue("border-color");
+
+
+        String colorHex = Color.fromString(colorNokta).asHex();
         System.out.println(colorHex);
         Assert.assertEquals(colorHex,"#dc3545");
     }
@@ -162,12 +160,160 @@ us10_formsPage.userEmail.sendKeys(faker.name().firstName()+faker.name().lastName
     @Then("Submiti Tiklayin")
     public void submitiTiklayin() {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
+
         us10_formsPage.submit.click();
+
     }
 
     @Then("Onaylandigini dogrulayin")
     public void onaylandiginiDogrulayin() {
         Assert.assertTrue(us10_formsPage.sonucBaslik.getText().equals("Thanks for submitting the form"));
 
+    }
+
+    @Then("First Name bos Birakilamayacagini dogrulayin")
+    public void firstNameBosBirakilamayacaginiDogrulayin() {
+
+
+        actions.sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(1);
+        String colorFirstName=us10_formsPage.firstName.getCssValue("border-color");
+
+
+        String colorHex = Color.fromString(colorFirstName).asHex();
+        System.out.println(colorHex);
+        Assert.assertEquals(colorHex,"#dc3545");
+    }
+
+    @Then("LastName bos Birakilamayacagini dogrulayin")
+    public void lastnameBosBirakilamayacaginiDogrulayin() {
+
+        actions.sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(1);
+        String colorLastNam=us10_formsPage.lastName.getCssValue("border-color");
+
+
+        String colorHex = Color.fromString(colorLastNam).asHex();
+        System.out.println(colorHex);
+        Assert.assertEquals(colorHex,"#dc3545");
+
+    }
+
+    @Then("cinsiyette birden fazla secim yapilamadigini dogrulayin")
+    public void cinsiyetteBirdenFazlaSecimYapilamadiginiDogrulayin() {
+        if (us10_formsPage.genderRadio1.isSelected()) {
+            Assert.assertFalse(us10_formsPage.genderRadio2.isSelected());
+            Assert.assertFalse(us10_formsPage.genderRadio3.isSelected());
+        } else if (us10_formsPage.genderRadio2.isSelected()) {
+            Assert.assertFalse(us10_formsPage.genderRadio1.isSelected());
+            Assert.assertFalse(us10_formsPage.genderRadio3.isSelected());
+        }else if (us10_formsPage.genderRadio3.isSelected()){
+            Assert.assertFalse(us10_formsPage.genderRadio2.isSelected());
+            Assert.assertFalse(us10_formsPage.genderRadio1.isSelected());
+    }
+
+    }
+
+    @Then("email at olmadan kabul edilmedigini dogrulayin")
+    public void emailAtOlmadanKabulEdilmediginiDogrulayin() {
+
+        actions.sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(1);
+        String colormailAt=us10_formsPage.userEmail.getCssValue("border-color");
+
+
+        String colorHex = Color.fromString(colormailAt).asHex();
+        System.out.println(colorHex);
+        Assert.assertEquals(colorHex,"#dc3545");
+    }
+
+    @And("emaili temizleyin")
+    public void emailiTemizleyin() {
+        us10_formsPage.userEmail.clear();
+    }
+
+    @Then("email nokta olmadan kabul edilmedigini dogrulayin")
+    public void emailNoktaOlmadanKabulEdilmediginiDogrulayin() {
+
+        actions.sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(1);
+        String colorMail=us10_formsPage.userEmail.getCssValue("border-color");
+
+
+        String colorHex = Color.fromString(colorMail).asHex();
+        System.out.println(colorHex);
+        Assert.assertEquals(colorHex,"#dc3545");
+    }
+
+    @Then("Tel on hane  olmadan kabul edilmedigini dogrulayin")
+    public void telOnHaneOlmadanKabulEdilmediginiDogrulayin() {
+    }
+
+    @And("tel bolumunu temizleyin")
+    public void telBolumunuTemizleyin() {
+    }
+
+    @And("gelecek Yili dogum tarihi giriniz")
+    public void gelecekYiliDogumTarihiGiriniz() {
+    }
+
+    @Then("yeniden Dene")
+    public void yenidenDene() {
+    }
+
+    @Then("tarih gunumuzden ileride secilemedigini dogrulayin")
+    public void tarihGunumuzdenIlerideSecilemediginiDogrulayin() {
+    }
+
+    @And("birden fazla giris yapilabildigini dogrulayin")
+    public void birdenFazlaGirisYapilabildiginiDogrulayin() {
+    }
+
+    @Then("Ayni anda birden fazla subject girilebildigini dogrulayin")
+    public void ayniAndaBirdenFazlaSubjectGirilebildiginiDogrulayin() {
+    }
+
+    @Then("Subjet bolumunde otomatik tamamlamayi dogrulayin")
+    public void subjetBolumundeOtomatikTamamlamayiDogrulayin() {
+    }
+
+    @And("tum hobbyleri secin")
+    public void tumHobbyleriSecin() {
+    }
+
+    @Then("Hobbies bolumunde secme serbestiyeti")
+    public void hobbiesBolumundeSecmeSerbestiyeti() {
+    }
+
+    @Then("resmin secildigini dogrulayiniz")
+    public void resminSecildiginiDogrulayiniz() {
+    }
+
+    @And("Current Adres sadece rakam giriniz")
+    public void currentAdresSadeceRakamGiriniz() {
+    }
+
+    @And("Current Adres sadece harf giriniz")
+    public void currentAdresSadeceHarfGiriniz() {
+    }
+
+    @And("Current Adrese ozel karakterler giriniz")
+    public void currentAdreseOzelKarakterlerGiriniz() {
+    }
+
+    @And("state Tiklayiniz")
+    public void stateTiklayiniz() {
+    }
+
+    @Then("state isimlerinin gorundugunu dogrulayiniz")
+    public void stateIsimlerininGorundugunuDogrulayiniz() {
+    }
+
+    @And("city Tiklayiniz")
+    public void cityTiklayiniz() {
+    }
+
+    @Then("city isimlerinin gorundugunu dogrulayiniz")
+    public void cityIsimlerininGorundugunuDogrulayiniz() {
     }
 }
