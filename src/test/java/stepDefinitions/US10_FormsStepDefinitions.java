@@ -1,6 +1,7 @@
 package stepDefinitions;
 
 import com.github.javafaker.Faker;
+import io.cucumber.java.bs.A;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
@@ -13,22 +14,28 @@ import pages.US10_FormsPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import javax.xml.crypto.Data;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Date;
+import java.util.List;
+
 public class US10_FormsStepDefinitions {
 
-US10_FormsPage us10_formsPage=new US10_FormsPage();
-Faker faker=new Faker();
-Actions actions=new Actions(Driver.getDriver());
-
+    US10_FormsPage us10_formsPage = new US10_FormsPage();
+    Faker faker = new Faker();
+    Actions actions = new Actions(Driver.getDriver());
 
 
     @Given("Kulanici Forms  accordionunu tiklar")
     public void kulanici_forms_accordionunu_tiklar() {
-       us10_formsPage.formSection.click();
+        us10_formsPage.formSection.click();
     }
 
     @Given("Kullanici acilan sekmede Practice Forms butonu tiklar")
     public void kullanici_acilan_sekmede_practice_forms_butonu_tiklar() {
-       us10_formsPage.practiseForm.click();
+        us10_formsPage.practiseForm.click();
     }
 
     @Then("Kullanici acilan sayfada Student Registration Form oldugunu dogrular.")
@@ -45,41 +52,36 @@ Actions actions=new Actions(Driver.getDriver());
     @Given("firstname kabul edildigini dogrulayiniz")
     public void firstname_kabul_edildigini_dogrulayiniz() {
 
-        String colorFirst=us10_formsPage.firstName.getCssValue("border-color");
+        String colorFirst = us10_formsPage.firstName.getCssValue("border-color");
 
 
         String colorHex = Color.fromString(colorFirst).asHex();
         System.out.println(colorHex);
-        Assert.assertEquals(colorHex,"#28a745");
+        Assert.assertEquals(colorHex, "#28a745");
     }
-
-
-
 
 
     @Then("Kullanici email bilgisini at olmadan girer")
     public void kullanici_email_bilgisini_at_olmadan_girer() {
-    us10_formsPage.userEmail.sendKeys(faker.name().firstName() + faker.name().lastName()+".com");
+        us10_formsPage.userEmail.sendKeys(faker.name().firstName() + faker.name().lastName() + ".com");
 
     }
 
     @Then("kabul edilmedigini dogrular")
     public void kabul_edilmedigini_dogrular() {
 
-        String colorNokta=us10_formsPage.userEmail.getCssValue("border-color");
+        String colorNokta = us10_formsPage.userEmail.getCssValue("border-color");
 
 
         String colorHex = Color.fromString(colorNokta).asHex();
         System.out.println(colorHex);
-        Assert.assertEquals(colorHex,"#dc3545");
+        Assert.assertEquals(colorHex, "#dc3545");
     }
 
     @Then("Kullanici email bilgisini nokta olmadan girer")
     public void kullanici_email_bilgisini_nokta_olmadan_girer() {
-us10_formsPage.userEmail.sendKeys(faker.name().firstName()+faker.name().lastName()+"@com");
+        us10_formsPage.userEmail.sendKeys(faker.name().firstName() + faker.name().lastName() + "@com");
     }
-
-
 
 
     @And("FirstName yaziniz  {string}")
@@ -109,19 +111,20 @@ us10_formsPage.userEmail.sendKeys(faker.name().firstName()+faker.name().lastName
 
     @And("valid dogum tarihi giriniz {string}")
     public void validDogumTarihiGiriniz(String arg0) {
- us10_formsPage.dateOfBirthInput.click();
- Select selectAy=new Select(us10_formsPage.selectAy);
+        us10_formsPage.dateOfBirthInput.click();
+        Select selectAy = new Select(us10_formsPage.selectAy);
 
         selectAy.selectByValue("5");
 
-        Select selectYil=new Select(us10_formsPage.selectYil);
+        Select selectYil = new Select(us10_formsPage.selectYil);
         selectYil.selectByValue("2000");
-       us10_formsPage.selectGun.click();
+        us10_formsPage.selectGun.click();
 
     }
 
     @And("subject Giriniz")
     public void subjectGiriniz() {
+        ReusableMethods.waitFor(1);
         us10_formsPage.subjectsContainer.sendKeys("m");
         ReusableMethods.waitFor(1);
         actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
@@ -148,19 +151,19 @@ us10_formsPage.userEmail.sendKeys(faker.name().firstName()+faker.name().lastName
 
     @And("State seciniz")
     public void stateSeciniz() {
-        us10_formsPage.state.sendKeys("NCR"+Keys.ENTER);
+        us10_formsPage.state.sendKeys("NCR" + Keys.ENTER);
     }
 
     @And("City seciniz")
     public void citySeciniz() {
-        us10_formsPage.city.sendKeys("Delhi"+Keys.ENTER);
+        us10_formsPage.city.sendKeys("Delhi" + Keys.ENTER);
 
     }
 
     @Then("Submiti Tiklayin")
     public void submitiTiklayin() {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-
+        ReusableMethods.waitFor(1);
         us10_formsPage.submit.click();
 
     }
@@ -177,12 +180,12 @@ us10_formsPage.userEmail.sendKeys(faker.name().firstName()+faker.name().lastName
 
         actions.sendKeys(Keys.PAGE_UP).perform();
         ReusableMethods.waitFor(1);
-        String colorFirstName=us10_formsPage.firstName.getCssValue("border-color");
+        String colorFirstName = us10_formsPage.firstName.getCssValue("border-color");
 
 
         String colorHex = Color.fromString(colorFirstName).asHex();
         System.out.println(colorHex);
-        Assert.assertEquals(colorHex,"#dc3545");
+        Assert.assertEquals(colorHex, "#dc3545");
     }
 
     @Then("LastName bos Birakilamayacagini dogrulayin")
@@ -190,12 +193,12 @@ us10_formsPage.userEmail.sendKeys(faker.name().firstName()+faker.name().lastName
 
         actions.sendKeys(Keys.PAGE_UP).perform();
         ReusableMethods.waitFor(1);
-        String colorLastNam=us10_formsPage.lastName.getCssValue("border-color");
+        String colorLastNam = us10_formsPage.lastName.getCssValue("border-color");
 
 
         String colorHex = Color.fromString(colorLastNam).asHex();
         System.out.println(colorHex);
-        Assert.assertEquals(colorHex,"#dc3545");
+        Assert.assertEquals(colorHex, "#dc3545");
 
     }
 
@@ -207,10 +210,10 @@ us10_formsPage.userEmail.sendKeys(faker.name().firstName()+faker.name().lastName
         } else if (us10_formsPage.genderRadio2.isSelected()) {
             Assert.assertFalse(us10_formsPage.genderRadio1.isSelected());
             Assert.assertFalse(us10_formsPage.genderRadio3.isSelected());
-        }else if (us10_formsPage.genderRadio3.isSelected()){
+        } else if (us10_formsPage.genderRadio3.isSelected()) {
             Assert.assertFalse(us10_formsPage.genderRadio2.isSelected());
             Assert.assertFalse(us10_formsPage.genderRadio1.isSelected());
-    }
+        }
 
     }
 
@@ -219,12 +222,12 @@ us10_formsPage.userEmail.sendKeys(faker.name().firstName()+faker.name().lastName
 
         actions.sendKeys(Keys.PAGE_UP).perform();
         ReusableMethods.waitFor(1);
-        String colormailAt=us10_formsPage.userEmail.getCssValue("border-color");
+        String colormailAt = us10_formsPage.userEmail.getCssValue("border-color");
 
 
-        String colorHex = Color.fromString(colormailAt).asHex();
-        System.out.println(colorHex);
-        Assert.assertEquals(colorHex,"#dc3545");
+        String colorHexmailAT = Color.fromString(colormailAt).asHex();
+        System.out.println(colorHexmailAT);
+        Assert.assertEquals(colorHexmailAT, "#dc3545");
     }
 
     @And("emaili temizleyin")
@@ -237,83 +240,159 @@ us10_formsPage.userEmail.sendKeys(faker.name().firstName()+faker.name().lastName
 
         actions.sendKeys(Keys.PAGE_UP).perform();
         ReusableMethods.waitFor(1);
-        String colorMail=us10_formsPage.userEmail.getCssValue("border-color");
+        String colorMail = us10_formsPage.userEmail.getCssValue("border-color");
 
 
-        String colorHex = Color.fromString(colorMail).asHex();
-        System.out.println(colorHex);
-        Assert.assertEquals(colorHex,"#dc3545");
+        String colorHexMail = Color.fromString(colorMail).asHex();
+        System.out.println(colorHexMail);
+        Assert.assertEquals(colorHexMail, "#dc3545");
     }
 
     @Then("Tel on hane  olmadan kabul edilmedigini dogrulayin")
     public void telOnHaneOlmadanKabulEdilmediginiDogrulayin() {
+        actions.sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(1);
+        String colorNumber = us10_formsPage.userNumber.getCssValue("border-color");
+
+
+        String colorHexNumber = Color.fromString(colorNumber).asHex();
+        System.out.println(colorHexNumber);
+        Assert.assertEquals(colorHexNumber, "#dc3545");
     }
 
     @And("tel bolumunu temizleyin")
     public void telBolumunuTemizleyin() {
+
+        us10_formsPage.userNumber.clear();
     }
 
     @And("gelecek Yili dogum tarihi giriniz")
     public void gelecekYiliDogumTarihiGiriniz() {
-    }
+        us10_formsPage.dateOfBirthInput.click();
+        Select selectAy = new Select(us10_formsPage.selectAy);
 
-    @Then("yeniden Dene")
-    public void yenidenDene() {
+        selectAy.selectByValue("6");
+
+        Select selectYil = new Select(us10_formsPage.selectYil);
+        selectYil.selectByValue("2030");
+        us10_formsPage.selectGun.click();
+
     }
 
     @Then("tarih gunumuzden ileride secilemedigini dogrulayin")
     public void tarihGunumuzdenIlerideSecilemediginiDogrulayin() {
+        String tarih = us10_formsPage.birtDaySonuc.getText();
+        System.out.println(tarih);
+        String tarihYil = tarih.substring(tarih.length() - 4);
+        int tarihYil1 = Integer.parseInt(tarihYil);
+        Date date = new Date();
+        DateFormat dateFormat2 = new SimpleDateFormat("yyyy");
+        String today = dateFormat2.format(date);
+        int todayYil = Integer.parseInt(today);
+        System.out.println(todayYil);
+        System.out.println(tarihYil1);
+        Assert.assertTrue(tarihYil1 <= todayYil);
     }
 
     @And("birden fazla giris yapilabildigini dogrulayin")
     public void birdenFazlaGirisYapilabildiginiDogrulayin() {
+        List<String> list = new ArrayList<String>();
+        String str = us10_formsPage.subjectSonuc.getText();
+        String[] arrStr = str.split(",");
+        for (String el : arrStr)
+            list.add(el);
+        System.out.println(list);
+        System.out.println(list.size());
+        Assert.assertTrue(list.size() > 1);
     }
 
-    @Then("Ayni anda birden fazla subject girilebildigini dogrulayin")
-    public void ayniAndaBirdenFazlaSubjectGirilebildiginiDogrulayin() {
-    }
-
-    @Then("Subjet bolumunde otomatik tamamlamayi dogrulayin")
-    public void subjetBolumundeOtomatikTamamlamayiDogrulayin() {
-    }
 
     @And("tum hobbyleri secin")
     public void tumHobbyleriSecin() {
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        us10_formsPage.readingCheckbox2.click();
+        us10_formsPage.musicCheckbox.click();
+        us10_formsPage.sportCheckbox1.click();
+
     }
 
     @Then("Hobbies bolumunde secme serbestiyeti")
     public void hobbiesBolumundeSecmeSerbestiyeti() {
+        /*Assert.assertTrue(us10_formsPage.sportCheckbox1.isSelected());
+        Assert.assertTrue(us10_formsPage.readingCheckbox2.isSelected());
+        Assert.assertTrue(us10_formsPage.musicCheckbox.isSelected());*/
+
+        Assert.assertTrue(us10_formsPage.hobbiesSonuc.getText().contains("Sports"));
+        Assert.assertTrue(us10_formsPage.hobbiesSonuc.getText().contains("Reading"));
+        Assert.assertTrue(us10_formsPage.hobbiesSonuc.getText().contains("Music"));
     }
 
     @Then("resmin secildigini dogrulayiniz")
     public void resminSecildiginiDogrulayiniz() {
+        Assert.assertTrue(us10_formsPage.dosyaSecSonuc.getText().equals("java.png"));
+
     }
 
     @And("Current Adres sadece rakam giriniz")
     public void currentAdresSadeceRakamGiriniz() {
+        us10_formsPage.currentAddress.sendKeys("1234567890");
     }
 
     @And("Current Adres sadece harf giriniz")
     public void currentAdresSadeceHarfGiriniz() {
+        us10_formsPage.currentAddress.sendKeys("ali");
     }
 
     @And("Current Adrese ozel karakterler giriniz")
     public void currentAdreseOzelKarakterlerGiriniz() {
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        us10_formsPage.currentAddress.sendKeys("!=@$%^&*()");
     }
 
     @And("state Tiklayiniz")
     public void stateTiklayiniz() {
+        ReusableMethods.waitFor(1);
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        ReusableMethods.waitFor(1);
+        us10_formsPage.state.sendKeys("C");
     }
 
     @Then("state isimlerinin gorundugunu dogrulayiniz")
     public void stateIsimlerininGorundugunuDogrulayiniz() {
+
+        actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
+        System.out.println(us10_formsPage.stateTik.getText());
+        Assert.assertTrue(us10_formsPage.stateTik.getText().equals("NCR"));
+
+        ReusableMethods.waitFor(1);
+        us10_formsPage.state.sendKeys("J");
+        actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
+        System.out.println(us10_formsPage.stateTik.getText());
+        Assert.assertTrue(us10_formsPage.stateTik.getText().equals("Rajasthan"));
     }
 
     @And("city Tiklayiniz")
     public void cityTiklayiniz() {
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        us10_formsPage.state.sendKeys("h");
+        actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
+        System.out.println(us10_formsPage.stateTik.getText());
+
+
+        ReusableMethods.waitFor(1);
     }
 
     @Then("city isimlerinin gorundugunu dogrulayiniz")
     public void cityIsimlerininGorundugunuDogrulayiniz() {
+        us10_formsPage.city.sendKeys("K");
+        actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
+        System.out.println(us10_formsPage.cityTik.getText());
+        Assert.assertTrue(us10_formsPage.cityTik.getText().equals("Karnal"));
     }
 }
+
+
+
+
+
+

@@ -125,12 +125,12 @@ Feature: US10_Forms.feature
     And valid dogum tarihi giriniz "06 Apr 2025"
     And subject Giriniz
     And Hobby seciniz 2
-    And Resim seciniz
+   # And Resim seciniz
     And Current Adres giriniz
     And State seciniz
     And City seciniz
     And Submiti Tiklayin
-    Then yeniden Dene
+
     Then tarih gunumuzden ileride secilemedigini dogrulayin
 
 
@@ -140,30 +140,11 @@ Feature: US10_Forms.feature
     And cinsiyet seciniz "rastgele"
     And valid telefon giriniz "1234567890"
     And subject Giriniz
+    And Submiti Tiklayin
     And birden fazla giris yapilabildigini dogrulayin
 
 
-  Scenario: TC_10_Ayni anda birden fazla subject kabul edilmeli
-    And FirstName yaziniz  "abdullah"
-    And LastName yaziniz  "yalcin"
-    And cinsiyet seciniz "rastgele"
-    And valid telefon giriniz "1234567890"
-    And subject Giriniz
-    And Submiti Tiklayin
-    Then Ayni anda birden fazla subject girilebildigini dogrulayin
-
-
-  Scenario: TC_11_ Subjet bolumunde otomatik tamamlamayi
-
-    And FirstName yaziniz  "abdullah"
-    And LastName yaziniz  "yalcin"
-    And cinsiyet seciniz "rastgele"
-    And valid telefon giriniz "1234567890"
-    And subject Giriniz
-    And Submiti Tiklayin
-    Then Subjet bolumunde otomatik tamamlamayi dogrulayin
-
-  Scenario: TC_12_Hobbies bolumunde secme serbestiyeti
+  Scenario: TC_10_Hobbies bolumunde secme serbestiyeti
 
     And FirstName yaziniz  "abdullah"
     And LastName yaziniz  "yalcin"
@@ -173,7 +154,7 @@ Feature: US10_Forms.feature
     And Submiti Tiklayin
     Then Hobbies bolumunde secme serbestiyeti
 
-  Scenario: TC_13_Hobbies bolumunde secme serbestiyeti
+  Scenario: TC_11_resme_upload
 
     And FirstName yaziniz  "abdullah"
     And LastName yaziniz  "yalcin"
@@ -183,7 +164,7 @@ Feature: US10_Forms.feature
     And Submiti Tiklayin
     Then resmin secildigini dogrulayiniz
 
-  Scenario:TC_14_Current Adresin sadece rakam kabul ettigini dogrulayin
+  Scenario:TC_12_Current Adresin sadece rakam kabul ettigini dogrulayin
     And FirstName yaziniz  "abdullah"
     And LastName yaziniz  "yalcin"
     And cinsiyet seciniz "rastgele"
@@ -192,7 +173,7 @@ Feature: US10_Forms.feature
     And Submiti Tiklayin
     Then Onaylandigini dogrulayin
 
-  Scenario:TC_15_Current Adresin sadece harf kabul ettigini dogrulayin
+  Scenario:TC_13_Current Adresin sadece harf kabul ettigini dogrulayin
     And FirstName yaziniz  "abdullah"
     And LastName yaziniz  "yalcin"
     And cinsiyet seciniz "rastgele"
@@ -202,7 +183,7 @@ Feature: US10_Forms.feature
     Then Onaylandigini dogrulayin
 
 
-  Scenario:TC_16_Current Adresin ozel karakter kabul ettigini dogrulayin
+  Scenario:TC_14_Current Adresin ozel karakter kabul ettigini dogrulayin
     And FirstName yaziniz  "abdullah"
     And LastName yaziniz  "yalcin"
     And cinsiyet seciniz "rastgele"
@@ -212,11 +193,11 @@ Feature: US10_Forms.feature
     Then Onaylandigini dogrulayin
 
 
-  Scenario:TC_17_state isimleri tiklama ile gorulmeli
+  Scenario:TC_15_state isimleri tiklama ile gorulmeli
     And state Tiklayiniz
     Then state isimlerinin gorundugunu dogrulayiniz
 
-  Scenario:TC_18_City isimleri tiklma ile gorulmeli
+  Scenario:TC_16_City isimleri tiklma ile gorulmeli
 
     And city Tiklayiniz
     Then city isimlerinin gorundugunu dogrulayiniz
