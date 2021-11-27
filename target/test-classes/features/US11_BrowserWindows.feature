@@ -15,6 +15,11 @@ Scenario: TC_02_NEW BUTTONU TIKLANABILIR VE YENI BIR SAYFA ACMALI
   Then new tab butonuna tiklayin
   Then new tab butonunu tiklayinca yeni bir sayfa acilinca "This is a sample page" yazisinin oldugunu dogrulayin
 
-  Scenario: TC_03_new WINDOW butonu tiklanabilir ve yeni bir pencere acmali
+  Scenario: TC_02_new WINDOW butonu tiklanabilir ve yeni bir pencere acmali
     Then new window butonu tiklayin
     Then new window butonu tilayinca yeni bir pencere actigini dogrulayin
+
+  Scenario: TC_03_new WINDOW_Message butonu tiklanabilir ve yeni bir pencere acmali
+     Then new window message butonu tiklayin
+     Then new window message butonu tiklayinca yeni bir pencere acildigini dogrulayin
+

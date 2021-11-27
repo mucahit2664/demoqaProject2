@@ -2,19 +2,22 @@ package stepDefinitions;
 
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
 import pages.US11_BrowserWindowsPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
 import java.util.ArrayList;
+import java.util.List;
 import java.util.Set;
 
 public class US11_BrowserWindowsStepDefinitions {
-US11_BrowserWindowsPage us11_browserWindowsPage=new US11_BrowserWindowsPage();
-Actions actions=new Actions(Driver.getDriver());
+    US11_BrowserWindowsPage us11_browserWindowsPage = new US11_BrowserWindowsPage();
+    Actions actions = new Actions(Driver.getDriver());
 
 
     @Given("Kulanici Alerts, Frame & Windows accordionunu tiklar")
@@ -27,11 +30,12 @@ Actions actions=new Actions(Driver.getDriver());
     @Given("Kullanici acilan sekmede BrowserWindows  butonu tiklar")
     public void kullanici_acilan_sekmede_browser_windows_butonu_tiklar() {
 
-actions.sendKeys(Keys.PAGE_DOWN).perform();
-ReusableMethods.waitFor(1);
-us11_browserWindowsPage.browserWindows.click();
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        ReusableMethods.waitFor(1);
+        us11_browserWindowsPage.browserWindows.click();
 
     }
+
     @Then("Kullanici new Tab butonunun tiklanabilir oldugunu dogrular")
     public void kullanici_new_tab_butonunun_tiklanabilir_oldugunu_dogrular() {
         Assert.assertTrue(us11_browserWindowsPage.newTabButton.isEnabled());
@@ -61,7 +65,7 @@ us11_browserWindowsPage.browserWindows.click();
         String parentWindowHandle = Driver.getDriver().getWindowHandle();
         System.out.println(Driver.getDriver().getCurrentUrl());
         ReusableMethods.waitFor(2);
-       //us11_browserWindowsPage.newTabButton.click();
+        //us11_browserWindowsPage.newTabButton.click();
         Set<String> windowHandles = Driver.getDriver().getWindowHandles();
         for (String newTabHandle : windowHandles) {
             if (newTabHandle != parentWindowHandle) {
@@ -93,5 +97,36 @@ us11_browserWindowsPage.browserWindows.click();
 
         Assert.assertTrue(us11_browserWindowsPage.thisISaSamplePage2.isDisplayed());
     }
+
+    @Then("new window message butonu tiklayin")
+    public void new_window_message_butonu_tiklayin() {
+        ReusableMethods.waitFor(1);
+        us11_browserWindowsPage.messageWindow.click();
     }
+
+    @Then("new window message butonu tiklayinca yeni bir pencere acildigini dogrulayin")
+    public void new_window_message_butonu_tiklayinca_yeni_bir_pencere_acildigini_dogrulayin() {
+      /*  ReusableMethods.waitFor(3);
+       // actions.click(us11_browserWindowsPage.browserWindows).perform();
+        System.out.println(Driver.getDriver().getWindowHandle());
+        ReusableMethods.waitFor(3);
+      //  us11_browserWindowsPage.browserWindows.click();
+
+        List<String> allWindowsHandles;
+        allWindowsHandles = new ArrayList<>(Driver.getDriver().getWindowHandles());
+        System.out.println(allWindowsHandles); // 2 tane windows handle aldigini gorduk.
+        Driver.getDriver().switchTo().window(allWindowsHandles.get(1));
+        System.out.println(Driver.getDriver().getWindowHandle()); //2. pencereye gecildigini gorduk.
+        String actualMessageWindowText = us11_browserWindowsPage.messageWindowText.getText();
+        System.out.println(actualMessageWindowText);
+        String expectedText = "Knowledge increases";
+
+        Assert.assertTrue(actualMessageWindowText.contains(expectedText));
+        }*/
+
+
+
+
+    }
+}
 

@@ -25,4 +25,6 @@ public class US11_BrowserWindowsPage {
     public WebElement thisISaSamplePage;
     @FindBy(xpath = "//h1")
     public WebElement thisISaSamplePage2;
+    @FindBy(tagName = "body")
+    public WebElement messageWindowText;
 }
