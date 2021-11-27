@@ -37,17 +37,16 @@ public class Driver {
                     break;
             }
         }
-      //  driver.manage().window().maximize();
+       //driver.manage().window().maximize();
         driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
       //  driver.close();
         return driver;
     }
 
     static public void closeDriver(){
-/*
         if (driver != null){
             driver.close();
             driver=null;
-        }*/
+        }
     }
 }
