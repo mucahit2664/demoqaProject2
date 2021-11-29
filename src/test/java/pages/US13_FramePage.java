@@ -16,4 +16,25 @@ public class US13_FramePage {
 //This is a sample page
     @FindBy(id = "sampleHeading")
     public WebElement samplePage;
+
+    @FindBy(xpath = "//span[.='Nested Frames']")
+    public WebElement nestedFrames;
+    @FindBy(tagName = "body")
+    public WebElement parentChildMessage;
+    @FindBy(xpath = "//span[.='Modal Dialogs']")
+    public WebElement modalDialogs;
+    @FindBy(id = "showSmallModal")
+    public WebElement showSmallModal;
+    @FindBy(xpath = "//div[@class='modal-body']")
+    public WebElement smallModal;
+    @FindBy(id = "closeSmallModal")
+    public WebElement close;
+    @FindBy(id = "showLargeModal")
+    public WebElement largeModalButton;
+    @FindBy(xpath = "//p")
+    public WebElement largeModalText;
+    @FindBy(id = "closeLargeModal")
+    public WebElement largeModalWindowCloseButton;
+    @FindBy (xpath = "//body")
+    public WebElement textAssertionTag;
 }
