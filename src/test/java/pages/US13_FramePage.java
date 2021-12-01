@@ -27,6 +27,8 @@ public class US13_FramePage {
     public WebElement showSmallModal;
     @FindBy(xpath = "//div[@class='modal-body']")
     public WebElement smallModal;
+    @FindBy(tagName = "body")
+    public WebElement smallModalText;
     @FindBy(id = "closeSmallModal")
     public WebElement close;
     @FindBy(id = "showLargeModal")

@@ -15,14 +15,19 @@ Feature:US13_Alerts.feature
         Then nestedFrame arasinda gecis oldugu dogrulanabiir
 
 
-        Scenario: TC_03_smallModal_Dialogs
-          And Kulanici acilan sekmede modalDialogs basligini tiklar.
-          And Kullanici acilan sayfada smallModal buonuna tiklar
-          Then Kullanici "This is a small modal. It has very less content"mesaji gorur
-          Then Kullanici close butonuna basildiginda smallModalin kapandigini dogrular
+  Scenario: TC_20
+    And Kulanici acilan sekmede modalDialogs basligini tiklar.
+    And kullanici Large modal butonunu tiklar
+    And kullanici "message" ı goruntuler:
+    """
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    """
 
-          Scenario: TC_04_large_Modals
-            And Kulanici acilan sekmede modalDialogs basligini tiklar.
-          And Kullanici acilan sayfada largeModal buonuna tiklar
-          Then Kullanici mesaji gorur
-          Then Kullanici close butonuna basildiginda largeModalin kapandigini dogrular
+
+  Scenario: TC_21
+    And Kulanici acilan sekmede modalDialogs basligini tiklar.
+    And kullanici Large modal butonunu tiklar
+    And kullanici goruntuler
+  """
+  Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+    """

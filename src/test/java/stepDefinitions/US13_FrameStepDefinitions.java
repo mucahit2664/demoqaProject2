@@ -134,5 +134,36 @@ us13_framePage.modalDialogs.click();
         us13_framePage.largeModalWindowCloseButton.click();
         Assert.assertTrue(us13_framePage.textAssertionTag.getCssValue("class").equals(""));
     }
+
+
+    @And("kullanici {string} ı goruntuler:")
+    public void kullaniciIGoruntuler(String arg0,String uzunmesaj) {
+ReusableMethods.waitFor(1);
+        System.out.println(arg0);
+        System.out.println(uzunmesaj);
+        System.out.println(us13_framePage.smallModal.getText());
+        Assert.assertTrue(us13_framePage.smallModal.getText().equals(uzunmesaj));
+
+    }
+
+
+    @And("kullanici goruntuler")
+    public void kullaniciGoruntuler(String a) {
+
+
+        System.out.println(a);
+        System.out.println(us13_framePage.smallModal.getText());
+        Assert.assertTrue(us13_framePage.smallModal.getText().equals(a));
+    }
+
+
+
+
+    @And("kullanici Large modal butonunu tiklar")
+    public void kullaniciLargeModalButonunuTiklar() {
+        us13_framePage.largeModalButton.click();
+    }
+
+
 }
 
