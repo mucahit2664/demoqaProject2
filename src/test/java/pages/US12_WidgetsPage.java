@@ -13,7 +13,7 @@ public class US12_WidgetsPage {
     @FindBy(xpath = "(//div[@class='card-up'])[4]")
     public WebElement WidgetBolum;
 
-
+    //Accordian
     @FindBy(xpath ="//span[.='Accordian']")
     public WebElement accordianSekmesi;
 
@@ -36,17 +36,20 @@ public class US12_WidgetsPage {
     @FindBy(xpath = "//div[@class='collapse show']")
     public WebElement collapseShow;
 
-
-
 //Auto_Complete
 
     @FindBy(xpath ="//span[.='Auto Complete']")
     public WebElement Auto_CompleteSekmesi;
-    @FindBy(xpath ="(//div[@class='auto-complete__value-container auto-complete__value-container--is-multi css-1hwfws3'])[1]")
+    @FindBy(id ="autoCompleteMultipleContainer")
     public WebElement multipleAuto_CompleteInput;
 
-    @FindBy(id ="autoCompleteMultipleContainer")
+    @FindBy(xpath ="//div[@class='css-12jo7m5 auto-complete__multi-value__label']")
+    public WebElement multipleAuto_CompleteInpu;
+
+
+    @FindBy(xpath ="//div[@class='auto-complete__value-container css-1hwfws3']")
     public WebElement singleCompleteInput;
+
 
 
 }

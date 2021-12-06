@@ -1,16 +1,20 @@
 package stepDefinitions;
 
+import io.cucumber.java.bs.A;
 import io.cucumber.java.en.And;
+import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.asserts.SoftAssert;
 import pages.US12_WidgetsPage;
 import utilities.Driver;
 import utilities.ReusableMethods;
 
+import java.util.ArrayList;
 import java.util.List;
 
 
@@ -19,10 +23,9 @@ public class US12_WidgetsStepDefinitions {
     Actions actions = new Actions(Driver.getDriver());
 
 
-
     @And("kullanici widgets sekmesini acar")
     public void kullaniciWidgetsSekmesiniAcar() {
-widgets.WidgetBolum.click();
+        widgets.WidgetBolum.click();
     }
 
     @And("Kullanici Accordian sekmesini tiklar")
@@ -41,12 +44,12 @@ widgets.WidgetBolum.click();
     @Then("Kullanici digerlerinin kapalı oldugunu dogrular")
     public void kullaniciDigerlerininKapalıOldugunuDogrular() {
 
-        List<WebElement> elems=Driver.getDriver().findElements(By.xpath("//div[@class='collapse show']"));
+        List<WebElement> elems = Driver.getDriver().findElements(By.xpath("//div[@class='collapse show']"));
 
-       int okunanYaziSayisi= elems.size();
+        int okunanYaziSayisi = elems.size();
         System.out.println(okunanYaziSayisi);
         widgets.acordian1.click();
-        Assert.assertTrue(okunanYaziSayisi==1);
+        Assert.assertTrue(okunanYaziSayisi == 1);
     }
 
     @And("Kullanici ikinci acordian tiklar")
@@ -64,6 +67,9 @@ widgets.WidgetBolum.click();
         ReusableMethods.waitFor(2);
         System.out.println(widgets.acord3Text.getText());
     }
+
+
+
 
     //Auto Compolete
 
@@ -94,11 +100,77 @@ widgets.WidgetBolum.click();
 
 
     @Then("Kullanici Multiple text alaninna girdigi verilerin {string} icerdigini oldugunu dogrular")
-    public void kullaniciMultipleTextAlaninnaGirdigiVerilerinIcerdiginiOldugunuDogrular(String arg0) {
+    public void kullaniciMultipleTextAlaninnaGirdigiVerilerinIcerdiginiOldugunuDogrular(String harf) {
+        SoftAssert softAssert=new SoftAssert();
+        List<String> degerler =ReusableMethods.getElementsText(By.xpath("//div[@class='css-12jo7m5 auto-complete__multi-value__label']"));
+        System.out.println(degerler);
+        softAssert.assertTrue(degerler.get(0).contains(harf));
+        softAssert.assertTrue(degerler.get(1).contains(harf));
+        softAssert.assertTrue(degerler.get(2).contains(harf));
 
+        softAssert.assertAll();
+
+
+
+
+
+  /*  @Given("Kullanici multiple AutoComlete iki veri daha gonderir")
+    public void kullaniciMultipleAutoComleteIkiVeriDahaGonderir() {
+
+
+        actions.sendKeys(widgets.multipleAuto_CompleteInput, "a").perform();
+        ReusableMethods.waitFor(1);
+        actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
+        ReusableMethods.waitFor(1);
+
+        actions.sendKeys(widgets.multipleAuto_CompleteInput, "a").perform();
+        ReusableMethods.waitFor(1);
+        actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
+        ReusableMethods.waitFor(1);
+*/
     }
+
     @Then("Kullanici ayni text alaninda uc veri oldugunu dogrular")
     public void kullaniciAyniTextAlanindaUcVeriOldugunuDogrular() {
+        List<String> degerler =ReusableMethods.getElementsText(By.xpath("//div[@class='css-12jo7m5 auto-complete__multi-value__label']"));
+        org.testng.Assert.assertTrue(degerler.size()>1);
+        //  System.out.println(degerler);
+
+
+    }
+
+    @And("Kullanici single text alanina tiklar")
+    public void kullaniciSingleTextAlaninaTiklar() {
+        ReusableMethods.waitFor(1);
+        widgets.singleCompleteInput.click();
+    }
+
+
+
+    @Then("Kullanici birinci verinin olmadigini dogrular")
+    public void kullaniciBirinciVerininOlmadiginiDogrular() {
+        // String singleDeger =widgets.singleCompleteInput.getText();
+        SoftAssert softAssert=new SoftAssert();
+        List<String> singleDeger =ReusableMethods.getElementsText(By.xpath("//div[@class='auto-complete__single-value css-1uccc91-singleValue']"));
+        System.out.println(singleDeger);
+
+        softAssert.assertTrue(singleDeger.size()<2);
+        softAssert.assertNotEquals(singleDeger.get(0),"Magenta");
+
+
+    }
+
+    @Then("Kullanici ikinci verinin oldugunu dogrular")
+    public void kullaniciIkinciVerininOldugunuDogrular() {
+        SoftAssert softAssert=new SoftAssert();
+        List<String> singleDeger =ReusableMethods.getElementsText(By.xpath("//div[@class='auto-complete__single-value css-1uccc91-singleValue']"));
+        System.out.println(singleDeger);
+
+        softAssert.assertTrue(singleDeger.size()<2);
+        softAssert.assertEquals(singleDeger.get(0),"Blue");
+
     }
 
 }
+
+
