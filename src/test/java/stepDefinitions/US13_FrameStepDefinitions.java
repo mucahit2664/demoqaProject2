@@ -77,72 +77,78 @@ softAssert.assertTrue(parentMessage.equals("Parent frame"));
 softAssert.assertAll();
     }
 
-    @And("Kulanici acilan sekmede modalDialogs basligini tiklar.")
+    @And("Kulanici acilan sekmede Modal Dialogs basligini tiklar")
     public void kulaniciAcilanSekmedeModalDialogsBasliginiTiklar() {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
         ReusableMethods.waitFor(1);
-us13_framePage.modalDialogs.click();
+        us13_framePage.ModalDialogSekmesi.click();
     }
 
-    @And("Kullanici acilan sayfada smallModal buonuna tiklar")
-    public void kullaniciAcilanSayfadaSmallModalBuonunaTiklar() {
-        ReusableMethods.waitFor(1);
+
+    @Then("Kullanici small butonunun tiklanabilir oldugunu dogrular")
+    public void kullaniciSmallButonununTiklanabilirOldugunuDogrular() {
+
+        Assert.assertTrue(us13_framePage.showSmallModal.isEnabled());
+
+    }
+
+
+    @Then("Kullanici Large modal butonunun tiklanabilir oldugunu dogrular")
+    public void kullaniciLargeModalButonununTiklanabilirOldugunuDogrular() {
+        Assert.assertTrue(us13_framePage.showSmallModal.isEnabled());
+    }
+
+    @And("kullanici Small modal butonunu tiklar")
+    public void kullaniciSmallModalButonunuTiklar() {
         us13_framePage.showSmallModal.click();
     }
 
-
-    @Then("Kullanici {string}mesaji gorur")
-    public void kullaniciMesajiGorur(String arg0) {
-        SoftAssert softAssert=new SoftAssert();
-        ReusableMethods.waitFor(1);
-        softAssert.assertTrue(us13_framePage.smallModal.getText().equals(arg0));
-        System.out.println(arg0);
-        softAssert.assertAll();
+    @And("kullanici Large modal butonunu tiklar")
+    public void kullaniciLargeModalButonunuTiklar() {
+        us13_framePage.showLargeModal.click();
     }
 
-    @Then("Kullanici close butonuna basildiginda smallModalin kapandigini dogrular")
-    public void kullaniciCloseButonunaBasildigindaSmallModalinKapandiginiDogrular() {
-        us13_framePage.close.click();
-        Assert.assertTrue(us13_framePage.close.isEnabled());
+    @Then("kullanici large close butonunun enable oldugunu dogrular")
+    public void kullaniciLargeCloseButonununEnableoLdugunuDogrular() {
 
+        Assert.assertTrue(us13_framePage.closeLargeModal.isEnabled());
     }
 
-    @And("Kullanici acilan sayfada largeModal buonuna tiklar")
-    public void kullaniciAcilanSayfadaLargeModalBuonunaTiklar() {
-        ReusableMethods.waitFor(1);
-
-        us13_framePage.largeModalButton.click();
+    @Then("kullanici small close butonunun enable oldugunu dogrular")
+    public void kullaniciSmallCloseButonununEnableoLdugunuDogrular() {
+        Assert.assertTrue(us13_framePage.closeSmallModal.isEnabled());
+    }
+    @Then("Kullanici yeni bir small modal acildigini dogrular")
+    public void kullaniciYeniBirSmallModalAcildiginiDogrular() {
+        System.out.println(us13_framePage.small_LargeModaltext.getText());
+        Assert.assertTrue(us13_framePage.small_LargeModaltext.getText().equals("This is a small modal. It has very less content"));
     }
 
-
-    @Then("Kullanici mesaji gorur")
-    public void kullaniciMesajiGorur() {
-        SoftAssert softAssert=new SoftAssert();
-
-        String cssValue=us13_framePage.largeModalText.getCssValue("font-family");
-        System.out.println(cssValue);
-        softAssert.assertTrue(cssValue.contains("Roboto"));
-
-        softAssert.assertTrue(us13_framePage.largeModalText.isEnabled());
-
-        softAssert.assertAll();
-    }
-
-    @Then("Kullanici close butonuna basildiginda largeModalin kapandigini dogrular")
-    public void kullaniciCloseButonunaBasildigindaLargeModalinKapandiginiDogrular() {
-        ReusableMethods.waitFor(1);
-        us13_framePage.largeModalWindowCloseButton.click();
-        Assert.assertTrue(us13_framePage.textAssertionTag.getCssValue("class").equals(""));
+    @Then("kullanici Yeni Bir Genis Model Diyalog Acildigini Dogrular")
+    public void kullaniciYeniBirGenisModelDiyalogAcildiginiDogrular() {
+        ReusableMethods.waitFor(3);
+        System.out.println(us13_framePage.small_LargeModaltext.getText());
+        Assert.assertTrue(us13_framePage.small_LargeModaltext.getText()
+                .equals("Lorem Ipsum is simply dummy text of the printing and" +
+                        " typesetting industry. Lorem Ipsum has been the industry's " +
+                        "standard dummy text ever since the 1500s, when an unknown printer " +
+                        "took a galley of type and scrambled it to make a type specimen book." +
+                        " It has survived not only five centuries, but also the leap into electronic " +
+                        "typesetting, remaining essentially unchanged. It was popularised in the " +
+                        "1960s with the release of Letraset sheets containing Lorem Ipsum passages," +
+                        " and more recently with desktop publishing software like Aldus PageMaker " +
+                        "including versions of Lorem Ipsum."));
     }
 
 
     @And("kullanici {string} ı goruntuler:")
     public void kullaniciIGoruntuler(String arg0,String uzunmesaj) {
-ReusableMethods.waitFor(1);
+
         System.out.println(arg0);
         System.out.println(uzunmesaj);
-        System.out.println(us13_framePage.smallModal.getText());
-        Assert.assertTrue(us13_framePage.smallModal.getText().equals(uzunmesaj));
+        ReusableMethods.waitFor(5);
+//        System.out.println(us13_framePage.small_LargeModaltext.getText());
+       Assert.assertTrue(us13_framePage.small_LargeModaltext.getText().equals(uzunmesaj));
 
     }
 
@@ -152,17 +158,11 @@ ReusableMethods.waitFor(1);
 
 
         System.out.println(a);
-        System.out.println(us13_framePage.smallModal.getText());
-        Assert.assertTrue(us13_framePage.smallModal.getText().equals(a));
+        ReusableMethods.waitFor(5);
+        System.out.println(us13_framePage.small_LargeModaltext.getText());
+        Assert.assertTrue(us13_framePage.small_LargeModaltext.getText().equals(a));
     }
 
-
-
-
-    @And("kullanici Large modal butonunu tiklar")
-    public void kullaniciLargeModalButonunuTiklar() {
-        us13_framePage.largeModalButton.click();
-    }
 
 
 }

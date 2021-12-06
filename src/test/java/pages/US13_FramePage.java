@@ -21,22 +21,29 @@ public class US13_FramePage {
     public WebElement nestedFrames;
     @FindBy(tagName = "body")
     public WebElement parentChildMessage;
-    @FindBy(xpath = "//span[.='Modal Dialogs']")
-    public WebElement modalDialogs;
-    @FindBy(id = "showSmallModal")
+    @FindBy(xpath ="//span[.='Modal Dialogs']")
+    public WebElement ModalDialogSekmesi;
+    @FindBy(tagName ="body")
+    public WebElement messagText;
+
+    @FindBy(id ="showLargeModal")
+    public WebElement showLargeModal;
+
+    @FindBy(id ="showSmallModal")
     public WebElement showSmallModal;
+
+    @FindBy(id ="closeSmallModal")
+    public WebElement closeSmallModal;
+
+    @FindBy(id ="closeLargeModal")
+    public WebElement closeLargeModal;
+
+    @FindBy(id ="example-modal-sizes-title-lg")
+    public WebElement largeModalBaslik;
+
+    @FindBy(id ="example-modal-sizes-title-sm")
+    public WebElement smallModalBaslik;
+
     @FindBy(xpath = "//div[@class='modal-body']")
-    public WebElement smallModal;
-    @FindBy(tagName = "body")
-    public WebElement smallModalText;
-    @FindBy(id = "closeSmallModal")
-    public WebElement close;
-    @FindBy(id = "showLargeModal")
-    public WebElement largeModalButton;
-    @FindBy(xpath = "//p")
-    public WebElement largeModalText;
-    @FindBy(id = "closeLargeModal")
-    public WebElement largeModalWindowCloseButton;
-    @FindBy (xpath = "//body")
-    public WebElement textAssertionTag;
+    public WebElement small_LargeModaltext;
 }
