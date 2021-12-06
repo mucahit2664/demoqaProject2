@@ -37,4 +37,16 @@ public class US12_WidgetsPage {
     public WebElement collapseShow;
 
 
+
+//Auto_Complete
+
+    @FindBy(xpath ="//span[.='Auto Complete']")
+    public WebElement Auto_CompleteSekmesi;
+    @FindBy(xpath ="(//div[@class='auto-complete__value-container auto-complete__value-container--is-multi css-1hwfws3'])[1]")
+    public WebElement multipleAuto_CompleteInput;
+
+    @FindBy(id ="autoCompleteMultipleContainer")
+    public WebElement singleCompleteInput;
+
+
 }

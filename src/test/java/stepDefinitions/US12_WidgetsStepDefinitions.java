@@ -64,4 +64,41 @@ widgets.WidgetBolum.click();
         ReusableMethods.waitFor(2);
         System.out.println(widgets.acord3Text.getText());
     }
+
+    //Auto Compolete
+
+
+
+
+    @And("Kullanici AutoComplete sekmesini tiklar")
+    public void kullaniciAutoCompleteSekmesiniTiklar() {
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        ReusableMethods.waitFor(1);
+        widgets.Auto_CompleteSekmesi.click();
+        actions.sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(2);
+    }
+
+    @And("Kullanici Multiple text alaninna tiklar")
+    public void kullaniciMultipleTextAlaninnaTiklar() {
+        widgets.multipleAuto_CompleteInput.click();
+        ReusableMethods.waitFor(1);
+    }
+
+    @And("Kullanici bir veri secer {string}")
+    public void kullaniciBirVeriSecer(String harf) {
+        actions.sendKeys(harf).perform();
+        actions.sendKeys(Keys.ARROW_DOWN).sendKeys(Keys.TAB).perform();
+        ReusableMethods.waitFor(1);
+    }
+
+
+    @Then("Kullanici Multiple text alaninna girdigi verilerin {string} icerdigini oldugunu dogrular")
+    public void kullaniciMultipleTextAlaninnaGirdigiVerilerinIcerdiginiOldugunuDogrular(String arg0) {
+
+    }
+    @Then("Kullanici ayni text alaninda uc veri oldugunu dogrular")
+    public void kullaniciAyniTextAlanindaUcVeriOldugunuDogrular() {
+    }
+
 }
