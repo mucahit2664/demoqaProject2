@@ -1,5 +1,6 @@
 package pages;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -48,4 +49,43 @@ public class US14_WidgetsPage {
 
     @FindBy(id = "autoCompleteSingle")
     public WebElement singleCompleteInput;
+//DATA-PICKER
+
+    @FindBy(xpath = "//span[.='Date Picker']")
+    public WebElement data_PickerSekmesi;
+
+    @FindBy(id = "datePickerMonthYearInput")
+    public WebElement selectandDate;
+@FindBy(className = "react-datepicker__year-select")
+    public WebElement year;
+    @FindBy(className = "react-datepicker__month-select")
+    public WebElement ay;
+    @FindBy(xpath="(//*[contains(@class,'react-datepicker')])[29]")
+    public WebElement dateilkGun;
+    @FindBy(id = "dateAndTimePickerInput")
+    public WebElement dateandTime;
+    @FindBy(xpath = "//div[.='May']")
+    public WebElement monthMay;
+    @FindBy(xpath = "//div[.='2018']")
+    public WebElement year2018;
+    @FindBy(xpath = "//div[@class='react-datepicker__year-read-view']")
+    public WebElement yearIki;
+    @FindBy(xpath = "//div[@class='react-datepicker__month-read-view']")
+    public WebElement month;
+
+    public WebElement getYear(String year){
+
+        return Driver.getDriver().findElement(By.xpath("//div[.='"+year+"']"));
+    }
+
+
+
+    public WebElement getMonth(String month){
+
+        return Driver.getDriver().findElement(By.xpath("//div[.='"+month+"']"));
+    }
+
+
+
+
 }
