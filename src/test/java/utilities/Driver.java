@@ -43,10 +43,9 @@ public class Driver {
         return driver;
     }
 
-    static public void closeDriver(){
+   /* static public void closeDriver(){
         if (driver != null){
             driver.close();
             driver=null;
-        }
+        }*/
     }
-}
