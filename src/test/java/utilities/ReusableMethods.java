@@ -134,14 +134,23 @@ public class ReusableMethods {
         actions.clickAndHold(element).perform();
         for (int i = 0; i < sliderStartPoint; i++) {
             if (sliderStartPoint > 0) {
+              //  actions.sendKeys(Keys.ARROW_LEFT).perform();
+            if (sliderStartPoint>target){
                 actions.sendKeys(Keys.ARROW_LEFT).perform();
+            }else if (target>sliderStartPoint){
+                actions.sendKeys(Keys.ARROW_RIGHT).perform();            }
+
             }
+
             value = element.getAttribute("value");
             if (value.equals("0")) {
                 for (int j = 0; j < target; j++) {
                     actions.sendKeys(Keys.ARROW_RIGHT).perform();
                 }
+
             }
+
+
         }
     }
 

@@ -40,24 +40,4 @@ Feature:Widgets
     Then Kullanici birinci verinin olmadigini dogrular
     Then Kullanici ikinci verinin oldugunu dogrular
 
-  Scenario: TC_05_Date_Picker
-    And Kullanici date pickers sekmesini tiklar
-    And Kullanici date girilecek selectboxa tiklar
-    And Kullanici yil secer "2100"
-    And Kullanici ay secer "April"
-    And Kullanici gun secer 12
-    Then Kullanici date and time secilebildigini dogrular
-
-  Scenario: TC_06_dateAndTime
-    And Kullanici date pickers sekmesini tiklar
-    And Kullanici date and time girilecek selectboxa tiklar
-    And Kullanici tablodan yil secer "2018"
-    And Kullanici tablodan ay secer "May"
-    And Kullanici gun secer 16
-    And Kullanici tablodan time secer "20:45"
-    Then Kullanici date and time secildigini dogrular
-
-
-
-
 

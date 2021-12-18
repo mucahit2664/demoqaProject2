@@ -1,9 +1,9 @@
 [
   {
-    "line": 2,
+    "line": 1,
     "elements": [
       {
-        "line": 4,
+        "line": 3,
         "name": "",
         "description": "",
         "type": "background",
@@ -11,10 +11,10 @@
         "steps": [
           {
             "result": {
-              "duration": 8216948900,
+              "duration": 14921113800,
               "status": "passed"
             },
-            "line": 5,
+            "line": 4,
             "name": "demoqa anasayfaya gidin",
             "match": {
               "location": "stepDefinitions.US01_TextBoxStepDefinitions.demoqa_anasayfaya_gidin()"
@@ -23,105 +23,10 @@
           },
           {
             "result": {
-              "duration": 393755600,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "elements butonuna basiniz",
-            "match": {
-              "location": "stepDefinitions.US01_TextBoxStepDefinitions.elements_butonuna_basiniz()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1400734500,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "Broken links butonuna tiklayiniz",
-            "match": {
-              "location": "stepDefinitions.US07_BrokenLinksStepDefintions.broken_links_butonuna_tiklayiniz()"
-            },
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-10-27T19:43:25.918Z",
-        "before": [
-          {
-            "result": {
-              "duration": 4684100,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepDefinitions.Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 9,
-        "name": "Tc01_validimage",
-        "description": "",
-        "id": "us07-brokenlinks;tc01-validimage",
-        "after": [
-          {
-            "result": {
-              "duration": 647891000,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 1204250300,
-              "status": "passed"
-            },
-            "line": 10,
-            "name": "valid image gorunurlugunu dogrulayiniz",
-            "match": {
-              "location": "stepDefinitions.US07_BrokenLinksStepDefintions.valid_image_gorunurlugunu_dogrulayiniz()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@broken"
-          }
-        ]
-      },
-      {
-        "line": 4,
-        "name": "",
-        "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 6753399700,
+              "duration": 174126700,
               "status": "passed"
             },
             "line": 5,
-            "name": "demoqa anasayfaya gidin",
-            "match": {
-              "location": "stepDefinitions.US01_TextBoxStepDefinitions.demoqa_anasayfaya_gidin()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 168016300,
-              "status": "passed"
-            },
-            "line": 6,
             "name": "elements butonuna basiniz",
             "match": {
               "location": "stepDefinitions.US01_TextBoxStepDefinitions.elements_butonuna_basiniz()"
@@ -130,24 +35,24 @@
           },
           {
             "result": {
-              "duration": 1371154000,
+              "duration": 149845200,
               "status": "passed"
             },
-            "line": 7,
-            "name": "Broken links butonuna tiklayiniz",
+            "line": 6,
+            "name": "textbox butonuna tiklayiniz",
             "match": {
-              "location": "stepDefinitions.US07_BrokenLinksStepDefintions.broken_links_butonuna_tiklayiniz()"
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.textbox_butonuna_tiklayiniz()"
             },
             "keyword": "And "
           }
         ]
       },
       {
-        "start_timestamp": "2021-10-27T19:43:38.047Z",
+        "start_timestamp": "2021-12-13T20:04:16.919Z",
         "before": [
           {
             "result": {
-              "duration": 999400,
+              "duration": 3023200,
               "status": "passed"
             },
             "match": {
@@ -155,121 +60,14 @@
             }
           }
         ],
-        "line": 12,
-        "name": "TC02_validLink",
-        "description": "",
-        "id": "us07-brokenlinks;tc02-validlink",
-        "after": [
-          {
-            "result": {
-              "duration": 582906100,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
-            }
-          }
-        ],
-        "type": "scenario",
-        "keyword": "Scenario",
-        "steps": [
-          {
-            "result": {
-              "duration": 3008719200,
-              "status": "passed"
-            },
-            "line": 13,
-            "name": "Click Here for Valid Link tiklayiniz",
-            "match": {
-              "location": "stepDefinitions.US07_BrokenLinksStepDefintions.click_here_for_valid_link_tiklayiniz()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 47036700,
-              "status": "passed"
-            },
-            "line": 14,
-            "name": "tikladiktan sonra anasayfaya gittigini dogrulayiniz",
-            "match": {
-              "location": "stepDefinitions.US07_BrokenLinksStepDefintions.tikladiktan_sonra_anasayfaya_gittigini_dogrulayiniz()"
-            },
-            "keyword": "Then "
-          }
-        ],
-        "tags": [
-          {
-            "name": "@broken"
-          }
-        ]
-      },
-      {
-        "line": 4,
+        "line": 28,
         "name": "",
         "description": "",
-        "type": "background",
-        "keyword": "Background",
-        "steps": [
-          {
-            "result": {
-              "duration": 7371389500,
-              "status": "passed"
-            },
-            "line": 5,
-            "name": "demoqa anasayfaya gidin",
-            "match": {
-              "location": "stepDefinitions.US01_TextBoxStepDefinitions.demoqa_anasayfaya_gidin()"
-            },
-            "keyword": "Given "
-          },
-          {
-            "result": {
-              "duration": 409022900,
-              "status": "passed"
-            },
-            "line": 6,
-            "name": "elements butonuna basiniz",
-            "match": {
-              "location": "stepDefinitions.US01_TextBoxStepDefinitions.elements_butonuna_basiniz()"
-            },
-            "keyword": "Then "
-          },
-          {
-            "result": {
-              "duration": 1342522400,
-              "status": "passed"
-            },
-            "line": 7,
-            "name": "Broken links butonuna tiklayiniz",
-            "match": {
-              "location": "stepDefinitions.US07_BrokenLinksStepDefintions.broken_links_butonuna_tiklayiniz()"
-            },
-            "keyword": "And "
-          }
-        ]
-      },
-      {
-        "start_timestamp": "2021-10-27T19:43:50.034Z",
-        "before": [
-          {
-            "result": {
-              "duration": 1041800,
-              "status": "passed"
-            },
-            "match": {
-              "location": "stepDefinitions.Hooks.setUp()"
-            }
-          }
-        ],
-        "line": 16,
-        "name": "TC03_Click Here for Broken Link",
-        "description": "",
-        "id": "us07-brokenlinks;tc03-click-here-for-broken-link",
+        "id": "textbox;;;2",
         "after": [
           {
             "result": {
-              "duration": 667931800,
+              "duration": 296441000,
               "status": "passed"
             },
             "match": {
@@ -278,54 +76,1110 @@
           }
         ],
         "type": "scenario",
-        "keyword": "Scenario",
+        "keyword": "Scenario Outline",
         "steps": [
           {
             "result": {
-              "duration": 4288138000,
+              "duration": 1193301500,
               "status": "passed"
             },
             "line": 17,
-            "name": "Click Here for Broken Link tiklayiniz",
+            "name": "Name  giriniz \"ahmet\"",
             "match": {
-              "location": "stepDefinitions.US07_BrokenLinksStepDefintions.click_here_for_broken_link_tiklayiniz()"
+              "arguments": [
+                {
+                  "val": "\"ahmet\"",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.tenameGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1303988300,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "email giriniz \"sa@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"sa@gmail.com\"",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.emailGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1181567500,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "currentadres giriniz \"adresim\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"adresim\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.currentadresGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1197029000,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "PermanentAdres giriniz \"yeni adres\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"yeni adres\"",
+                  "offset": 23
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.permanentadresGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1263213900,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "submit butonuna tiklayin",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.submit_butonuna_tiklayin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 108967200,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "isim onaylandigini dogrulayiniz \"ahmet\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"ahmet\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.isimOnaylandiginiDogrulayiniz(java.lang.String)"
             },
             "keyword": "Then "
           },
           {
             "result": {
-              "duration": 35390100,
+              "duration": 33063800,
               "status": "passed"
             },
-            "line": 18,
-            "name": "tikladiktan sonra sayfanin hata kodu verdigini dogrulayiniz",
+            "line": 23,
+            "name": "mail onaylandigini dogrulayiniz \"sa@gmail.com\"",
             "match": {
-              "location": "stepDefinitions.US07_BrokenLinksStepDefintions.tikladiktan_sonra_sayfanin_hata_kodu_verdigini_dogrulayiniz()"
+              "arguments": [
+                {
+                  "val": "\"sa@gmail.com\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.mailOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 46930700,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "currentadres onaylandigini dogrulayiniz \"adresim\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"adresim\"",
+                  "offset": 40
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.currentadresOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2054645500,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "permanentadres onaylandigini dogrulayiniz \"yeni adres\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"yeni adres\"",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.permanentadresOnaylandiginiDogrulayiniz(java.lang.String)"
             },
             "keyword": "Then "
           }
         ],
         "tags": [
           {
-            "name": "@broken"
+            "name": "@textbox"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1679759800,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "demoqa anasayfaya gidin",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.demoqa_anasayfaya_gidin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 241111100,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "elements butonuna basiniz",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.elements_butonuna_basiniz()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 292370100,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "textbox butonuna tiklayiniz",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.textbox_butonuna_tiklayiniz()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-13T20:04:41.036Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 29,
+        "name": "",
+        "description": "",
+        "id": "textbox;;;3",
+        "after": [
+          {
+            "result": {
+              "duration": 659442600,
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1153603900,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Name  giriniz \"rahmi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"rahmi\"",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.tenameGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1261231800,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "email giriniz \"rahmi@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"rahmi@gmail.com\"",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.emailGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1132299100,
+              "status": "passed"
+            },
+            "line": 19,
+            "name": "currentadres giriniz \"adres2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"adres2\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.currentadresGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1288047500,
+              "status": "passed"
+            },
+            "line": 20,
+            "name": "PermanentAdres giriniz \"aslan\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"aslan\"",
+                  "offset": 23
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.permanentadresGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1398421200,
+              "status": "passed"
+            },
+            "line": 21,
+            "name": "submit butonuna tiklayin",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.submit_butonuna_tiklayin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 110215000,
+              "status": "passed"
+            },
+            "line": 22,
+            "name": "isim onaylandigini dogrulayiniz \"rahmi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"rahmi\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.isimOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 55008600,
+              "status": "passed"
+            },
+            "line": 23,
+            "name": "mail onaylandigini dogrulayiniz \"rahmi@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"rahmi@gmail.com\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.mailOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 52127800,
+              "status": "passed"
+            },
+            "line": 24,
+            "name": "currentadres onaylandigini dogrulayiniz \"adres2\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"adres2\"",
+                  "offset": 40
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.currentadresOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 2070869700,
+              "status": "passed"
+            },
+            "line": 25,
+            "name": "permanentadres onaylandigini dogrulayiniz \"aslan\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"aslan\"",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.permanentadresOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@textbox"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "duration": 1636173100,
+              "status": "passed"
+            },
+            "line": 4,
+            "name": "demoqa anasayfaya gidin",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.demoqa_anasayfaya_gidin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 263438600,
+              "status": "passed"
+            },
+            "line": 5,
+            "name": "elements butonuna basiniz",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.elements_butonuna_basiniz()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 339425900,
+              "status": "passed"
+            },
+            "line": 6,
+            "name": "textbox butonuna tiklayiniz",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.textbox_butonuna_tiklayiniz()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-13T20:04:52.532Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 30,
+        "name": "",
+        "description": "",
+        "id": "textbox;;;4",
+        "after": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d96.0.4664.93)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-OQC39B2\u0027, ip: \u0027192.168.43.157\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.12\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\\Users\\BESTTE~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:60525}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: fc082c21c71a6b3498670f3d7b0eb274\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)\r\n\tat stepDefinitions.Hooks.tearDown(Hooks.java:21)\r\n",
+              "duration": 12223394700,
+              "status": "failed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 1183985200,
+              "status": "passed"
+            },
+            "line": 17,
+            "name": "Name  giriniz \"nermin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"nermin\"",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.tenameGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "duration": 1316564100,
+              "status": "passed"
+            },
+            "line": 18,
+            "name": "email giriniz \"mes@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"mes@gmail.com\"",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.emailGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d96.0.4664.93)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-OQC39B2\u0027, ip: \u0027192.168.43.157\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.12\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\\Users\\BESTTE~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:60525}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: fc082c21c71a6b3498670f3d7b0eb274\n*** Element info: {Using\u003did, value\u003dcurrentAddress}\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:323)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElementById(RemoteWebDriver.java:372)\r\n\tat org.openqa.selenium.By$ById.findElement(By.java:188)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:315)\r\n\tat org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:69)\r\n\tat org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)\r\n\tat com.sun.proxy.$Proxy20.sendKeys(Unknown Source)\r\n\tat stepDefinitions.US01_TextBoxStepDefinitions.currentadresGiriniz(US01_TextBoxStepDefinitions.java:86)\r\n\tat ✽.currentadres giriniz \"adres3\"(file:///C:/Users/BEST%20TECH/IdeaProjects/demoqaProject2/src/test/resources/features/US01_Textbox.feature:19)\r\n",
+              "duration": 12230177300,
+              "status": "failed"
+            },
+            "line": 19,
+            "name": "currentadres giriniz \"adres3\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"adres3\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.currentadresGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 20,
+            "name": "PermanentAdres giriniz \"kaplan\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"kaplan\"",
+                  "offset": 23
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.permanentadresGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 21,
+            "name": "submit butonuna tiklayin",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.submit_butonuna_tiklayin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 22,
+            "name": "isim onaylandigini dogrulayiniz \"nermin\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"nermin\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.isimOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 23,
+            "name": "mail onaylandigini dogrulayiniz \"mes@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"mes@gmail.com\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.mailOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "currentadres onaylandigini dogrulayiniz \"adres3\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"adres3\"",
+                  "offset": 40
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.currentadresOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "permanentadres onaylandigini dogrulayiniz \"kaplan\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"kaplan\"",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.permanentadresOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@textbox"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d96.0.4664.93)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-OQC39B2\u0027, ip: \u0027192.168.43.157\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.12\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\\Users\\BESTTE~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:60525}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: fc082c21c71a6b3498670f3d7b0eb274\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\r\n\tat stepDefinitions.US01_TextBoxStepDefinitions.demoqa_anasayfaya_gidin(US01_TextBoxStepDefinitions.java:21)\r\n\tat ✽.demoqa anasayfaya gidin(file:///C:/Users/BEST%20TECH/IdeaProjects/demoqaProject2/src/test/resources/features/US01_Textbox.feature:4)\r\n",
+              "duration": 12272546600,
+              "status": "failed"
+            },
+            "line": 4,
+            "name": "demoqa anasayfaya gidin",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.demoqa_anasayfaya_gidin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "duration": 999000,
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "elements butonuna basiniz",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.elements_butonuna_basiniz()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "textbox butonuna tiklayiniz",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.textbox_butonuna_tiklayiniz()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-13T20:05:21.904Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 31,
+        "name": "",
+        "description": "",
+        "id": "textbox;;;5",
+        "after": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d96.0.4664.93)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-OQC39B2\u0027, ip: \u0027192.168.43.157\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.12\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\\Users\\BESTTE~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:60525}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: fc082c21c71a6b3498670f3d7b0eb274\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)\r\n\tat stepDefinitions.Hooks.tearDown(Hooks.java:21)\r\n",
+              "duration": 12191625600,
+              "status": "failed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "duration": 199400,
+              "status": "skipped"
+            },
+            "line": 17,
+            "name": "Name  giriniz \"melik\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"melik\"",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.tenameGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 18,
+            "name": "email giriniz \"as@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"as@gmail.com\"",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.emailGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 19,
+            "name": "currentadres giriniz \"12345\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"12345\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.currentadresGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 20,
+            "name": "PermanentAdres giriniz \"kedi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"kedi\"",
+                  "offset": 23
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.permanentadresGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 21,
+            "name": "submit butonuna tiklayin",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.submit_butonuna_tiklayin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 22,
+            "name": "isim onaylandigini dogrulayiniz \"melik\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"melik\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.isimOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 23,
+            "name": "mail onaylandigini dogrulayiniz \"as@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"as@gmail.com\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.mailOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "duration": 1006200,
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "currentadres onaylandigini dogrulayiniz \"12345\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"12345\"",
+                  "offset": 40
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.currentadresOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "permanentadres onaylandigini dogrulayiniz \"kedi\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"kedi\"",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.permanentadresOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@textbox"
+          }
+        ]
+      },
+      {
+        "line": 3,
+        "name": "",
+        "description": "",
+        "type": "background",
+        "keyword": "Background",
+        "steps": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d96.0.4664.93)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-OQC39B2\u0027, ip: \u0027192.168.43.157\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.12\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\\Users\\BESTTE~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:60525}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: fc082c21c71a6b3498670f3d7b0eb274\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.get(RemoteWebDriver.java:277)\r\n\tat stepDefinitions.US01_TextBoxStepDefinitions.demoqa_anasayfaya_gidin(US01_TextBoxStepDefinitions.java:21)\r\n\tat ✽.demoqa anasayfaya gidin(file:///C:/Users/BEST%20TECH/IdeaProjects/demoqaProject2/src/test/resources/features/US01_Textbox.feature:4)\r\n",
+              "duration": 12249121200,
+              "status": "failed"
+            },
+            "line": 4,
+            "name": "demoqa anasayfaya gidin",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.demoqa_anasayfaya_gidin()"
+            },
+            "keyword": "Given "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 5,
+            "name": "elements butonuna basiniz",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.elements_butonuna_basiniz()"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 6,
+            "name": "textbox butonuna tiklayiniz",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.textbox_butonuna_tiklayiniz()"
+            },
+            "keyword": "And "
+          }
+        ]
+      },
+      {
+        "start_timestamp": "2021-12-13T20:05:46.472Z",
+        "before": [
+          {
+            "result": {
+              "status": "passed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.setUp()"
+            }
+          }
+        ],
+        "line": 32,
+        "name": "",
+        "description": "",
+        "id": "textbox;;;6",
+        "after": [
+          {
+            "result": {
+              "error_message": "org.openqa.selenium.WebDriverException: chrome not reachable\n  (Session info: chrome\u003d96.0.4664.93)\nBuild info: version: \u00273.141.59\u0027, revision: \u0027e82be7d358\u0027, time: \u00272018-11-14T08:17:03\u0027\nSystem info: host: \u0027DESKTOP-OQC39B2\u0027, ip: \u0027192.168.43.157\u0027, os.name: \u0027Windows 10\u0027, os.arch: \u0027amd64\u0027, os.version: \u002710.0\u0027, java.version: \u002711.0.12\u0027\nDriver info: org.openqa.selenium.chrome.ChromeDriver\nCapabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 96.0.4664.93, chrome: {chromedriverVersion: 96.0.4664.45 (76e4c1bb2ab46..., userDataDir: C:\\Users\\BESTTE~1\\AppData\\L...}, goog:chromeOptions: {debuggerAddress: localhost:60525}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}\nSession ID: fc082c21c71a6b3498670f3d7b0eb274\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)\r\n\tat java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)\r\n\tat java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)\r\n\tat java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)\r\n\tat org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)\r\n\tat org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)\r\n\tat org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:609)\r\n\tat org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:295)\r\n\tat stepDefinitions.Hooks.tearDown(Hooks.java:21)\r\n",
+              "duration": 12193244400,
+              "status": "failed"
+            },
+            "match": {
+              "location": "stepDefinitions.Hooks.tearDown(io.cucumber.java.Scenario)"
+            }
+          }
+        ],
+        "type": "scenario",
+        "keyword": "Scenario Outline",
+        "steps": [
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 17,
+            "name": "Name  giriniz \"said\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"said\"",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.tenameGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 18,
+            "name": "email giriniz \"der@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"der@gmail.com\"",
+                  "offset": 14
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.emailGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 19,
+            "name": "currentadres giriniz \"adres5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"adres5\"",
+                  "offset": 21
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.currentadresGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 20,
+            "name": "PermanentAdres giriniz \"2345\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2345\"",
+                  "offset": 23
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.permanentadresGiriniz(java.lang.String)"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 21,
+            "name": "submit butonuna tiklayin",
+            "match": {
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.submit_butonuna_tiklayin()"
+            },
+            "keyword": "And "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 22,
+            "name": "isim onaylandigini dogrulayiniz \"said\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"said\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.isimOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 23,
+            "name": "mail onaylandigini dogrulayiniz \"der@gmail.com\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"der@gmail.com\"",
+                  "offset": 32
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.mailOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 24,
+            "name": "currentadres onaylandigini dogrulayiniz \"adres5\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"adres5\"",
+                  "offset": 40
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.currentadresOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          },
+          {
+            "result": {
+              "status": "skipped"
+            },
+            "line": 25,
+            "name": "permanentadres onaylandigini dogrulayiniz \"2345\"",
+            "match": {
+              "arguments": [
+                {
+                  "val": "\"2345\"",
+                  "offset": 42
+                }
+              ],
+              "location": "stepDefinitions.US01_TextBoxStepDefinitions.permanentadresOnaylandiginiDogrulayiniz(java.lang.String)"
+            },
+            "keyword": "Then "
+          }
+        ],
+        "tags": [
+          {
+            "name": "@textbox"
           }
         ]
       }
     ],
-    "name": "US07_BrokenLinks",
+    "name": "TextBox",
     "description": "",
-    "id": "us07-brokenlinks",
+    "id": "textbox",
     "keyword": "Feature",
-    "uri": "file:src/test/resources/features/US07_BrokenLinks.feature",
-    "tags": [
-      {
-        "name": "@broken",
-        "type": "Tag",
-        "location": {
-          "line": 1,
-          "column": 1
-        }
-      }
-    ]
+    "uri": "file:src/test/resources/features/US01_Textbox.feature",
+    "tags": []
   }
 ]
