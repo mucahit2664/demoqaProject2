@@ -14,7 +14,7 @@ import utilities.ReusableMethods;
 import java.util.ArrayList;
 import java.util.List;
 
-public class US04_WebTablesStepdefinitions {
+public class US04_WebTablesStepDefinitions {
 
     US04_WebTablesPage uS04_WebTablesPage = new US04_WebTablesPage();
     Actions actions = new Actions(Driver.getDriver());
