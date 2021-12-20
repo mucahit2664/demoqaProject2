@@ -56,7 +56,10 @@ public class ReusableMethods {
         }
         return elemTexts;
     }
-
+    public static void jsClick(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        js.executeScript("arguments[0].click();", element);
+    }
     //========Returns the Text of the element given an element locator==//
     public static List<String> getElementsText(By locator) {
         List<WebElement> elems = Driver.getDriver().findElements(locator);
@@ -134,23 +137,14 @@ public class ReusableMethods {
         actions.clickAndHold(element).perform();
         for (int i = 0; i < sliderStartPoint; i++) {
             if (sliderStartPoint > 0) {
-              //  actions.sendKeys(Keys.ARROW_LEFT).perform();
-            if (sliderStartPoint>target){
                 actions.sendKeys(Keys.ARROW_LEFT).perform();
-            }else if (target>sliderStartPoint){
-                actions.sendKeys(Keys.ARROW_RIGHT).perform();            }
-
             }
-
             value = element.getAttribute("value");
             if (value.equals("0")) {
                 for (int j = 0; j < target; j++) {
                     actions.sendKeys(Keys.ARROW_RIGHT).perform();
                 }
-
             }
-
-
         }
     }
 
@@ -175,6 +169,7 @@ public class ReusableMethods {
         }
         return hex;
     }
+
 
 }
 
