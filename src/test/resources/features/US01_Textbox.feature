@@ -12,7 +12,7 @@ Feature:TextBox
     And adres2 giriniz
     And submit butonuna tiklayin
     And giris isleminin tamamlandigini dogrulayin
-
+@textbox
   Scenario Outline:
     And Name  giriniz "<isim>"
     And email giriniz "<email>"
