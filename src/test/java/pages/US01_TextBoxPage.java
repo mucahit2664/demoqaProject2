@@ -43,9 +43,6 @@ public class US01_TextBoxPage {
     @FindBy(xpath="//button[@class='btn btn-primary']")
     public WebElement submitButton;
 
-    @FindBy(xpath = "//div[@class='col-12 mt-4 col-md-6']")
-    public WebElement submitButtonEngel;
-
     @FindBy(xpath = "//div[@class='border col-md-12 col-sm-12']")
     public WebElement formKayit;
 

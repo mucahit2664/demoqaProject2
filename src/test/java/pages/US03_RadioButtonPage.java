@@ -8,8 +8,10 @@ import utilities.Driver;
 public class US03_RadioButtonPage {
 
 
-    public US03_RadioButtonPage(){
-        PageFactory.initElements(Driver.getDriver(),this);
+
+    public US03_RadioButtonPage() {
+        PageFactory.initElements(Driver.getDriver(), this);
+
     }
 
     @FindBy(xpath ="//span[.='Radio Button']")
@@ -30,4 +32,12 @@ public class US03_RadioButtonPage {
     public WebElement noButton;
 
 
+
 }
+
+
+
+
+
+
+

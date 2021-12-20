@@ -14,23 +14,20 @@ import utilities.ReusableMethods;
 import java.util.ArrayList;
 import java.util.List;
 
-public class US04_WebTablesStepDefinitions {
+public class US04_WebTablesStepdefinitions {
+
     US04_WebTablesPage uS04_WebTablesPage = new US04_WebTablesPage();
     Actions actions = new Actions(Driver.getDriver());
 
-    static String isim = "";
+   static String isim="";
 
 
     @And("webTables butonuna basiniz")
     public void web_tables_butonuna_basiniz() {
 
         //actions.sendKeys(Keys.PAGE_DOWN).perform();
-
-        //ReusableMethods.waitFor(1);
-
         uS04_WebTablesPage.webTables.click();
         ReusableMethods.waitFor(1);
-
     }
 
 
@@ -39,12 +36,10 @@ public class US04_WebTablesStepDefinitions {
         uS04_WebTablesPage.add.click();
     }
 
-
     @And("submit butonuna tiklayiniz")
     public void submitButonunaTiklayiniz() {
         uS04_WebTablesPage.submit.click();
     }
-
 
     @And("cikan formda firstName yaziniz  {string}")
     public void cikanFormdaFirstNameYaziniz(String arg0) {
@@ -84,8 +79,8 @@ public class US04_WebTablesStepDefinitions {
 
     @And("search butonuna firstName giriniz {string}")
     public void searchButonunaFirstNameGiriniz(String arg0) {
-        uS04_WebTablesPage.seaarch.sendKeys(arg0);
-        ReusableMethods.waitFor(2);
+      uS04_WebTablesPage.seaarch.sendKeys(arg0);
+      ReusableMethods.waitFor(2);
     }
 
     @Then("kaydin ekledigini dogrulayiniz {string}")
@@ -97,20 +92,12 @@ public class US04_WebTablesStepDefinitions {
     @And("duzenle butonuna basiniz")
     public void duzenleButonunaBasiniz() {
         uS04_WebTablesPage.edit.click();
-
-
     }
-
-    @And("Firstname yedekName {string} ile degistiriniz")
-    public void firstnameYedekNameIleDegistiriniz(String arg0) throws Throwable {
-
-    }
-
     @And("sil butonuna basiniz")
     public void silButonunaBasiniz() {
 
 
-        isim = uS04_WebTablesPage.firstRow.getText();
+        isim=uS04_WebTablesPage.firstRow.getText();
 
         uS04_WebTablesPage.sil.click();
 
@@ -121,9 +108,9 @@ public class US04_WebTablesStepDefinitions {
     public void kaydinSilindiginiDogrulayiniz() {
 
         System.out.println();
-        System.out.print("son isim:   " + isim);
+        System.out.print("son isim:   "+isim);
         System.out.println();
-        System.out.print("son firstrow:   " + uS04_WebTablesPage.firstRow.getText());
+        System.out.print("son firstrow:   "+uS04_WebTablesPage.firstRow.getText());
         Assert.assertFalse(uS04_WebTablesPage.firstRow.getText().equals(isim));
     }
 
@@ -131,19 +118,17 @@ public class US04_WebTablesStepDefinitions {
     @And("liste olustur")
     public void listeOlustur() {
 
-        //  list.add(Driver.getDriver().findElement(By.xpath("//div[@class='rt-tr -odd'])")).getText());
+        List <WebElement> elems=Driver.getDriver().findElements(By.xpath("//div[@class='rt-tr -odd']"));
+       List list=new ArrayList();
 
-        List<WebElement> elems = Driver.getDriver().findElements(By.xpath("//div[@class='rt-tr -odd']"));
-        List list = new ArrayList();
-
-
-
-     list=ReusableMethods.getElementsText(elems);
+       list=ReusableMethods.getElementsText(elems);
         System.out.println(list);
-        }
 
 
+        
+        
     }
 
 
 
+}

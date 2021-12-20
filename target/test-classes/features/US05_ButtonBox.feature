@@ -19,4 +19,4 @@ Feature: US05_ButtonBox
     And clickme butonuna basildigini dogrulayiniz
 
   Scenario:TC_04_BUTTONSDISPLAY
-    And Buttons yazisinin gorunurlugunu basildigini Dogrulayiniz
+    And "Buttons" yazisinin gorunurlugunu  Dogrulayiniz

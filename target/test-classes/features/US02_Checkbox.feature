@@ -1,14 +1,21 @@
-@check
-Feature:Checkbox
+@ft2
 
-  Scenario: CHECKBOX DOGRULAMA
+Feature:US02_CheckBox
+
+  Background:
     Given demoqa anasayfaya gidin
     Then elements butonuna basiniz
-    And checktbox butonuna tiklayiniz
-    And + butonuna basınız
-    And butun mnenunun acildigini dogrulayin
-    And eksibutonuna basiniz
-    Then menunun kapalı oldugunu dogrulayiniz
-    And + butonuna basınız
-    Then excelfile butonu basin
-    Then excelfile butonu secili oldugunu dogrulayin
+    And checkbox butonuna tiklayiniz
+
+
+  Scenario:TC01_ARTIBUTONU
+    And sum butona basiniz
+    And excel file seciniz
+    Then Excelin secili oldugunu dogrulayiniz
+    Then menunun acik oldugunu dogrulayiniz
+
+
+  Scenario:TC02_EKSIBUTONU
+    And eksi butonunu tiklayiniz
+    Then menunun kapali oldugunu dogrulayiniz
+
