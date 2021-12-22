@@ -23,3 +23,14 @@ Feature: US_16_sliders
     Then Kullanici veri islemi bittiginde cizginin yesile donmesi ve %100 yazisi reset yazisinin oldugunu dogrular
 
     Then Kullanici reset butonuna bastiginda tekrar basladigini dogrular
+
+Scenario: TC_05_ToolTips
+  And Kullanici tooltips butonunu tiklar
+  And Kullanici mouse buttonun ustune getirir butonun uzerinde geldiginde renginin degistigini ve yazinin ciktigini dogrular
+  And Kullanici hover me too see uzerine tiklar butona tikladiginda border-color renginin degistigini dogrular
+  Then  Kullanici hover me too see uzerine geldiginde cikan texti dogrular
+
+
+
+
+
