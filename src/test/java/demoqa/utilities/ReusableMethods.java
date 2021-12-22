@@ -60,6 +60,13 @@ public class ReusableMethods {
         JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
         js.executeScript("arguments[0].click();", element);
     }
+    public static String jsGetInnerText(WebElement element) {
+        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+        String innerText = js.executeScript("return arguments[0].textContent;"
+                , new WebDriverWait(Driver.getDriver(), 15)
+                        .until(ExpectedConditions.visibilityOf(element))).toString();
+        return innerText;
+    }
     //========Returns the Text of the element given an element locator==//
     public static List<String> getElementsText(By locator) {
         List<WebElement> elems = Driver.getDriver().findElements(locator);
