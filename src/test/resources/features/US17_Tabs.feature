@@ -25,3 +25,40 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
    """
 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
 """
+
+
+
+
+
+  Scenario:     TC02_Hover Tool Tips Button
+
+    And KullaniciTool Tips sekmesini tiklar
+    And Kullanici fareyi butonun uzerine getirir
+    Then Kullanici rengin degistigini dogrular
+    Then Kullanici "Button" textinin gorundugunu dogrular
+    And Kullanici hover butonunu tiklar
+    And kullanici rengi dogrular
+
+  Scenario:     TC03_Hover Tool Tips text
+
+    And KullaniciTool Tips sekmesini tiklar
+    And Kullanici fareyi textboxin uzerine getirir
+    Then Kullanici "text field" textinin gorundugunu dogrular
+    And Kullanici  textboxa tiklar
+    And kullanici rengi dogrular
+
+
+  Scenario:     TC04_Hover Tool Tips Contrary
+
+    And KullaniciTool Tips sekmesini tiklar
+    And Kullanici fareyi textin uzerine getirir "Contrary"
+    Then Kullanici rengin degistigini dogrular
+    Then Kullanici "Contrary" textinin gorundugunu dogrular
+
+  Scenario:     TC05_Hover Tool Tips  Text 1.10.32
+
+    And KullaniciTool Tips sekmesini tiklar
+    And Kullanici fareyi textin uzerine getirir "deger"
+    Then Kullanici rengin degistigini dogrular
+    Then Kullanici "1.10.32" textinin gorundugunu dogrular
+

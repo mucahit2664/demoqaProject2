@@ -98,6 +98,22 @@ public class US16_SlidersPage {
     public WebElement gorunurText;
 
 
+    ///// TOOL
+
+    @FindBy(id = "toolTipButton")
+    public WebElement hoverButton;
+
+
+
+    @FindBy(id = "toolTipTextField")
+    public WebElement hovertextBox;
+
+    @FindBy(xpath = "//a[.='Contrary']")
+    public WebElement hoverContraryText;
+
+    @FindBy(xpath = "//a[.='1.10.32']")
+    public WebElement hoverDegerText;
+
 
 
 }
