@@ -32,11 +32,6 @@ Feature: US_16_sliders
     Then Kullanici  useText  icerdigini dogrular
     Then Kullanici More tabina basilamadigini dogrular
 
-Scenario: TC_04_ToolTips
-  And Kullanici tooltips butonunu tiklar
-  And Kullanici mouse buttonun ustune getirir butonun uzerinde geldiginde renginin degistigini ve yazinin ciktigini dogrular
-  And Kullanici hover me too see uzerine tiklar butona tikladiginda border-color renginin degistigini dogrular
-  Then  Kullanici hover me too see uzerine geldiginde cikan texti dogrular
 
 
 
