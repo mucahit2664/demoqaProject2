@@ -4,11 +4,11 @@ Feature: US17_Tabs
   Background:
     Given demoqa anasayfaya gidin
     And kullanici widgets sekmesini acar
-
+    Given Kullanici Menu sekmesini tiklar
 
 Scenario: TC_01 Menu
 
-Given Kullanici Menu sekmesini tiklar
+
 Then Kullanici SubItemlerin gorunmedigini dogrular
 And Kullanici mouse Mainıtem1 uzerine getirir
 Then Kullanici SubItemlerin gorunmedigini dogrular
@@ -26,9 +26,22 @@ And Kullanici mouse subublist uzerine getirir
 Then Kullanici SubSubItemlerin gorundugunu dogrular
 
 
- Scenario Outline: TC_02 Menu
+ Scenario: TC_02_Menu
    Then Kullanici uc tane main-item oldugunu dogrular
-    Then Kullanici iki tane sub-item ve birtane sub-sub list oldugunu dogrular
-    Then Kullanici sekiz tane linkin oldugunu ve "<isimlerini>" dogrular
-   Examples:
-     | isimlerini |
+   And Kullanici mouse Mainıtem2 uzerine getirir
+   Then Kullanici iki tane sub-item ve birtane sub-sub list oldugunu dogrular
+
+
+   Scenario: TC_03
+    Then Kullanici sekiz tane linkin oldugunu ve isimlerini dogrular
+
+    |arg0 |
+   | Main Item   1      |
+     | Main Item  3      |
+     | Main Item   2      |
+     | Sub Item         |
+     | Sub Item         |
+     | SUB SUB LIST      |
+     | Sub Sub Item 1         |
+     | Sub Sub Item 2   |
+

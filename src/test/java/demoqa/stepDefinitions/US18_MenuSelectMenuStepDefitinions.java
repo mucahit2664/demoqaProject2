@@ -5,11 +5,12 @@ import demoqa.utilities.Driver;
 import demoqa.utilities.ReusableMethods;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
+import org.openqa.selenium.By;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.asserts.SoftAssert;
 
-import javax.print.attribute.standard.ReferenceUriSchemesSupported;
+import java.util.List;
 
 public class US18_MenuSelectMenuStepDefitinions {
 US18_MenuPage menuPage=new US18_MenuPage();
@@ -20,9 +21,11 @@ SoftAssert softAssert=new SoftAssert();
     @Given("Kullanici Menu sekmesini tiklar")
     public void kullanici_menu_sekmesini_tiklar() {
         actions.sendKeys(Keys.PAGE_DOWN).perform();
-menuPage.menuLink.click();
         ReusableMethods.waitFor(1);
+menuPage.menuLink.click();
+
 actions.sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(2);
     }
 
     @Then("Kullanici SubItemlerin gorunmedigini dogrular")
@@ -31,7 +34,7 @@ softAssert.assertFalse(menuPage.Sub_Item1.isDisplayed());
 softAssert.assertFalse(menuPage.Sub_Item2.isDisplayed());
 
 
-softAssert.assertAll();
+        softAssert.assertAll();
     }
 
     @Then("Kullanici mouse Mainıtem1 uzerine getirir")
@@ -45,6 +48,7 @@ ReusableMethods.waitFor(1);
         softAssert.assertFalse(menuPage.SubSubItem1.isDisplayed());
         softAssert.assertFalse(menuPage.SubSubItem2.isDisplayed());
 
+        softAssert.assertAll();
     }
 
     @Then("Kullanici mouse Mainıtem3 uzerine getirir")
@@ -66,6 +70,7 @@ ReusableMethods.waitFor(1);
         softAssert.assertTrue(menuPage.Sub_Item1.isDisplayed());
         softAssert.assertTrue(menuPage.Sub_Item2.isDisplayed());
 
+        softAssert.assertAll();
     }
 
     @Then("Kullanici mouse subItem1 uzerine getirir")
@@ -92,25 +97,36 @@ ReusableMethods.waitFor(1);
         softAssert.assertTrue(menuPage.SubSubItem1.isDisplayed());
         softAssert.assertTrue(menuPage.SubSubItem2.isDisplayed());
 
+        softAssert.assertAll();
     }
 
     @Then("Kullanici uc tane main-item oldugunu dogrular")
     public void kullaniciUcTaneMainItemOldugunuDogrular() {
 
+softAssert.assertTrue(menuPage.menuItems.size()==3);
 
 
+softAssert.assertAll();
     }
 
     @Then("Kullanici iki tane sub-item ve birtane sub-sub list oldugunu dogrular")
     public void kullaniciIkiTaneSubItemVeBirtaneSubSubListOldugunuDogrular() {
+
+
+List<String> subList=ReusableMethods.getElementsText(By.xpath("//ul[@id='nav']//li[2]/ul/li"));
+        System.out.println(subList);
+        softAssert.assertTrue(subList.size()==3);
+
+
     }
 
-    @Then("Kullanici sekiz tane linkin oldugunu ve {string} dogrular")
-    public void kullaniciSekizTaneLinkinOldugunuVeDogrular(String arg0) {
+
+
+    @Then("Kullanici sekiz tane linkin oldugunu ve isimlerini dogrular")
+    public void kullaniciSekizTaneLinkinOldugunuVeIsimleriniDogrular(List<String> arg0) {
+        List<String> subItemList=ReusableMethods.getElementsText(By.xpath("//ul[@id='nav']//li"));
+        //  System.out.println(subItemList);
+        softAssert.assertTrue(subItemList.size()==8);
+        softAssert.assertTrue(subItemList.contains(arg0));
     }
-
-
-
-
-
 }
