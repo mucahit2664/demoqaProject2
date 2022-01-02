@@ -125,7 +125,7 @@ List<String> subList=ReusableMethods.getElementsText(By.xpath("//ul[@id='nav']//
     @Then("Kullanici sekiz tane linkin oldugunu ve isimlerini dogrular")
     public void kullaniciSekizTaneLinkinOldugunuVeIsimleriniDogrular(List<String> arg0) {
         List<String> subItemList=ReusableMethods.getElementsText(By.xpath("//ul[@id='nav']//li"));
-        //  System.out.println(subItemList);
+      System.out.println(subItemList);
         softAssert.assertTrue(subItemList.size()==8);
         softAssert.assertTrue(subItemList.contains(arg0));
     }

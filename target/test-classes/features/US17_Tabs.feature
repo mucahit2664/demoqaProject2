@@ -19,16 +19,18 @@ Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem
      """
 The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for those interested. Sections 1.10.32 and 1.10.33 from "de Finibus Bonorum et Malorum" by Cicero are also reproduced in their exact original form, accompanied by English versions from the 1914 translation by H. Rackham.
 """
-  Scenario: TC_01_ToolTips
-    And Kullanici tooltips butonunu tiklar
-    And Kullanici mouse buttonun ustune getirir butonun uzerinde geldiginde renginin degistigini ve yazinin ciktigini dogrular
-    And Kullanici hover me too see uzerine tiklar butona tikladiginda border-color renginin degistigini dogrular
-    Then  Kullanici hover me too see uzerine geldiginde cikan texti dogrular
+
     And  Kullanici Use tab tiklar
     Then  kullanici texti dogrular
    """
 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
 """
+
+  Scenario: TC_01_ToolTips
+    And Kullanici tooltips butonunu tiklar
+    And Kullanici mouse buttonun ustune getirir butonun uzerinde geldiginde renginin degistigini ve yazinin ciktigini dogrular
+    And Kullanici hover me too see uzerine tiklar butona tikladiginda border-color renginin degistigini dogrular
+    Then  Kullanici hover me too see uzerine geldiginde cikan texti dogrular
 
 
   Scenario:     TC02_Hover Tool Tips Button
