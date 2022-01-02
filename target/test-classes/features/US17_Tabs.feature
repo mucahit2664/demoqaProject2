@@ -25,7 +25,11 @@ The standard chunk of Lorem Ipsum used since the 1500s is reproduced below for t
    """
 It is a long established fact that a reader will be distracted by the readable content of a page when looking at its layout.
 """
-
+  Scenario: TC_01_ToolTips
+    And Kullanici tooltips butonunu tiklar
+    And Kullanici mouse buttonun ustune getirir butonun uzerinde geldiginde renginin degistigini ve yazinin ciktigini dogrular
+    And Kullanici hover me too see uzerine tiklar butona tikladiginda border-color renginin degistigini dogrular
+    Then  Kullanici hover me too see uzerine geldiginde cikan texti dogrular
 
   Scenario:     TC02_Hover Tool Tips Button
 
