@@ -2,6 +2,7 @@ package demoqa.stepDefinitions;
 
 import io.cucumber.java.en.And;
 
+import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.interactions.Actions;
 import org.testng.asserts.SoftAssert;
@@ -78,6 +79,7 @@ softAssert.assertTrue(uS05_ButtonBoxPage.doubleClickMessage.getText().equals("Yo
         Assert.assertFalse(uS05_ButtonBoxPage.yaziButton.getText().equals("BUTTONS"));
     softAssert.assertAll();
     }
+
 
 
 }
