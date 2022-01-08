@@ -5,22 +5,36 @@ import demoqa.pages.BookStoreApplicationPage;
 import demoqa.utilities.ConfigReader;
 import demoqa.utilities.Driver;
 import demoqa.utilities.ReusableMethods;
+import io.cucumber.java.en.And;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import org.junit.Assert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.interactions.Actions;
+
+import java.util.List;
+
 
 public class BookStoreApplicationSignInSteps {
 
     BookStoreApplicationPage bookStore = new BookStoreApplicationPage();
     Faker faker=new Faker();
+    Actions actions=new Actions(Driver.getDriver());
 
     @Given("kullanici Book Store Application' a tiklar")
     public void kullanici_book_store_application_a_tiklar() {
         ReusableMethods.jsClick(bookStore.bookStoreApplication);
     }
+    @And("Kullanici bookstoreLogin tiklar")
+    public void kullaniciBookstoreLoginTiklar() {
+        ReusableMethods.jsClick(bookStore.loginButton);
 
+
+    }
     @When("kullanici New User butonuna tiklar")
     public void kullanici_new_user_butonuna_tiklar() {
+
         ReusableMethods.jsClick(bookStore.newUserButton);
     }
 
@@ -61,7 +75,7 @@ ReusableMethods.waitFor(1);
 
     @When("kullanici valid UserName ve Password bilgilerini girer")
     public void kullanici_valid_user_name_ve_password_bilgilerini_girer() {
-        bookStore.userName.sendKeys(faker.name().username());
+        bookStore.userName.sendKeys(ConfigReader.getProperty("bookStoreUserName"));
         bookStore.password.sendKeys(ConfigReader.getProperty("bookStorePassword"));
     }
     @When("Kullanici login butonuna tiklar")
@@ -69,4 +83,41 @@ ReusableMethods.waitFor(1);
         ReusableMethods.waitFor(1);
         bookStore.loginButton.click();
     }
+
+
+    @When("Kullanici search butonunda kitap {string} aratir")
+    public void kullaniciSearchButonundaKitapAratir(String arg0) {
+        ReusableMethods.waitFor(1);
+        bookStore.searchBox.sendKeys(arg0);
+    }
+
+    @Then("Kullanici {string} kitabin bulundugunu dogrular")
+    public void kullaniciKitabinBulundugunuDogrular(String arg0) {
+        System.out.println(bookStore.allData.size());
+        List<String> isimler=ReusableMethods.getElementsText(bookStore.allData);
+        Assert.assertTrue(isimler.contains(arg0));
+
+        }
+
+
+
+
+    @When("Kullanici kitabin bilgilerine tiklar")
+    public void kullaniciKitabinBilgilerineTiklar() {
+        bookStore.bookNameSearchResult.click();
+
+    }
+
+    @When("Kullanici bilgilere tikladiktan sonra addtoyourcollectiona tiklar")
+    public void kullaniciBilgilereTikladiktanSonraAddtoyourcollectionaTiklar() {
+
+    }
+
+
+    @Then("Kullanici profile bilgilerinde {string} kitabin eklendigini dogrular")
+    public void kullaniciProfileBilgilerindeKitabinEklendiginiDogrular(String arg0) {
+
+    }
+
+
 }
