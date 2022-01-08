@@ -1,9 +1,12 @@
 package demoqa.pages;
 
 import demoqa.utilities.Driver;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+
+import java.util.List;
 
 public class BookStoreApplicationPage {
 
@@ -50,4 +53,32 @@ public BookStoreApplicationPage(){
 
     @FindBy(xpath = "//button[@id='gotologin']")
     public WebElement backToLoginButton;
+
+    @FindBy(id = "searchBox")
+    public WebElement searchBox;
+
+    @FindBy(id = "gotoStore")
+    public WebElement goToBookStore;
+    @FindBy(xpath = "//span[text()='Profile']")
+    public WebElement Profile;
+    @FindBy(xpath = "//div[@class='action-buttons']")
+    public List<WebElement> allData;
+    @FindBy(xpath = "//span[@class='mr-2']/a")
+    public WebElement bookNameSearchResult;
+    @FindBy(xpath = "(//div[@class='rt-resizable-header-content'])[2]")
+    public List<WebElement> title;
+    @FindBy(xpath = "//div[@class='rt-tr -odd']")
+    public WebElement firstBook;
+    @FindBy(id = "basic-addon2")
+    public WebElement searchButton;
+    @FindBy(id = "addNewRecordButton")
+    public WebElement addNewRecordButton;
+
+
+
+    public WebElement getKitap(String kitapIsmi){
+
+        return Driver.getDriver().findElement(By.xpath("//span[contains (@id,'"+kitapIsmi+"')]"));
+    }
+
 }
