@@ -20,3 +20,7 @@ Feature: Book Store Application Sign-in Feature
       When Kullanici kitabin bilgilerine tiklar
       When Kullanici bilgilere tikladiktan sonra addtoyourcollectiona tiklar
       Then Kullanici profile bilgilerinde "Git Pocket Guide" kitabin eklendigini dogrular
+     When Kullanici bookstore tablosundaki row sayisini "10" olarak secer
+      Then Kullanici bookstore sayfasindaki row sayisini dogrular "10"
+       # When Kullanici profile butonuna tiklar
+        Then Kullanici kitap adiyla "Git Pocket Guide" yazar adini "Richard E. Silverman" eslestigini dogrular
