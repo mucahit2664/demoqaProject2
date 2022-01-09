@@ -12,6 +12,8 @@ import io.cucumber.java.en.When;
 import org.junit.Assert;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
+import org.testng.asserts.SoftAssert;
 
 import java.util.List;
 
@@ -22,10 +24,12 @@ public class BookStoreApplicationSignInSteps {
     Faker faker=new Faker();
     Actions actions=new Actions(Driver.getDriver());
 
+
     @Given("kullanici Book Store Application' a tiklar")
     public void kullanici_book_store_application_a_tiklar() {
         ReusableMethods.jsClick(bookStore.bookStoreApplication);
     }
+
     @And("Kullanici bookstoreLogin tiklar")
     public void kullaniciBookstoreLoginTiklar() {
         ReusableMethods.jsClick(bookStore.loginButton);
@@ -110,14 +114,60 @@ ReusableMethods.waitFor(1);
 
     @When("Kullanici bilgilere tikladiktan sonra addtoyourcollectiona tiklar")
     public void kullaniciBilgilereTikladiktanSonraAddtoyourcollectionaTiklar() {
+      actions.sendKeys(Keys.PAGE_DOWN).perform();
+      ReusableMethods.waitFor(1);
+      bookStore.addtoYourCollection.click();
+      //actions.sendKeys(Keys.PAGE_UP).perform();
+        ReusableMethods.waitFor(3);
+      Driver.getDriver().switchTo().alert().accept();
 
     }
 
 
     @Then("Kullanici profile bilgilerinde {string} kitabin eklendigini dogrular")
     public void kullaniciProfileBilgilerindeKitabinEklendiginiDogrular(String arg0) {
+        bookStore.Profile.click();
+Assert.assertTrue(bookStore.getKitap(arg0).isDisplayed());
+    }
+
+    @When("Kullanici bookstore tablosundaki row sayisini {string} olarak secer")
+    public void kullaniciBookstoreTablosundakiRowSayisiniOlarakSecer(String arg0) {
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+
+        Select options=new Select(bookStore.rowSelectMenu);
+        ReusableMethods.waitFor(1);
+        options.selectByValue(arg0);
 
     }
 
 
+
+    @Then("Kullanici bookstore sayfasindaki row sayisini dogrular {string}")
+    public void kullaniciBookstoreSayfasindakiRowSayisiniDogrular(String arg0) {
+        String rowCount=String.valueOf(bookStore.allRowsList.size());
+
+        System.out.println(rowCount);
+        Assert.assertEquals(rowCount,arg0);
+
+
+    }
+
+
+ /*   @When("Kullanici profile butonuna tiklar")
+    public void kullaniciProfileButonunaTiklar() {
+        actions.sendKeys(Keys.PAGE_DOWN).perform();
+        bookStore.Profile.click();
+
+    }*/
+
+    @Then("Kullanici kitap adiyla {string} yazar adini {string} eslestigini dogrular")
+    public void kullaniciKitapAdiylaYazarAdiniEslestiginiDogrular(String arg0, String arg1) {
+        SoftAssert softAssert=new SoftAssert();
+        actions.sendKeys(Keys.PAGE_UP).perform();
+softAssert.assertTrue(bookStore.ilkKitapIsmi.getText().equals(arg0));
+softAssert.assertTrue(bookStore.ilkYazarIsmi.getText().equals(arg1));
+
+
+softAssert.assertAll();
+    }
 }

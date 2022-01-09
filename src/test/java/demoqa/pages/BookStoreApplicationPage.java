@@ -71,9 +71,16 @@ public BookStoreApplicationPage(){
     public WebElement firstBook;
     @FindBy(id = "basic-addon2")
     public WebElement searchButton;
-    @FindBy(id = "addNewRecordButton")
-    public WebElement addNewRecordButton;
-
+    @FindBy(xpath = "(//button[@id='addNewRecordButton'])[2]")
+    public WebElement addtoYourCollection;
+    @FindBy(xpath = "//select[@aria-label='rows per page']")
+    public WebElement rowSelectMenu;
+    @FindBy(xpath = "//div[@class='rt-tr-group']")
+    public List <WebElement> allRowsList;
+    @FindBy(xpath = "(//div[@class='rt-td'])[2]")
+    public  WebElement ilkKitapIsmi;
+    @FindBy(xpath = "(//div[@class='rt-td'])[3]")
+    public  WebElement ilkYazarIsmi;
 
 
     public WebElement getKitap(String kitapIsmi){
